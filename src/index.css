@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: KarelleDEMO;
+  src: url("./fonts/FontsFree-Net-KarelleDEMO.ttf") format("truetype")
+}
+
+body {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /*Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.landing-page {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.landing-page::-webkit-scrollbar {
+  display: none;
+}
+
+.elevation {
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.44);
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.44);
+  -moz-box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.44);
+}
+
+.slider-image {
+  margin: 0px 20px;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider-image img {
+  width: 70px;
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.35));
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.drop-shadow-filter {
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.35));
+}
+
+button img .drop-shadow-filter {
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.65));
+}
+
+button img .no-shadow {
+  filter: none;
+}
+
+.carouselImage {
+  height: 232.69px !important;
+}
+
+.ant-carousel .slick-prev, .ant-carousel .slick-next {
+  display: block !important;
+  background: transparent !important;
+  color: black !important;
+}
+
+.ant-carousel .slick-dots li .slick-active button, .ant-carousel .slick-dots li button {
+  display: none !important;
+}
+
+@media(min-width: 768px) {
+  .carouselImage {
+    width: 457px !important;
+    height: 375.69px !important;
+  }
+}
+
+@media(min-width: 1024px) {
+  .slider-image img {
+    width: 80%;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.35));
+  }
+
+  .slider-image {
+    margin: 0px 44px;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .carouselImage {
+    height: 439.99px !important;
+  }
+}
