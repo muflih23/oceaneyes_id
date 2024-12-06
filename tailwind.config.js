@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        'primary': ['Work Sans'],
-        'body': ['Work Sans'],
-        'hero' : ['KarelleDEMO'],
+        'primary': ['Nunito'],
+        'body': ['Nunito'],
+        'hero' : ['Nunito'],
       },
       backgroundImage: {
         'banner': `url(${process.env.REACT_APP_PUBLIC_URL}/banner.png)`,
@@ -20,6 +20,16 @@ module.exports = {
         'greenMuted' : '#C8D0BF',
         'green' : '#5D7840',
         'surface' : '#F6F6F6',
+        'primary' : '#004F66',
+        'primaryL' : '#45A0BB',
+        'primaryL2' : '#52BEE6',
+        'primaryPale' : '#84AFBB',
+        'primaryGray' : '#9EB1B6',
+        'foreground' : '#06222D',
+        'background' : '#DEE5E8',
+        'secondary' : '#F07B4F',
+        'textGray' : '#7F99A4',
+        'textDarkGray' : '#4E656E',
       },
     },
   },

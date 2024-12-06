@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from './footer/footer'
-import Copyrights from './footer/copyright'
-import WhatsappChat from '../atoms/chat-whatsapp-button'
+// import Copyrights from './footer/copyright'
+// import WhatsappChat from '../atoms/chat-whatsapp-button'
 import Navbar from './header/navbar'
 
 function PageLayout({
@@ -12,12 +12,31 @@ function PageLayout({
     scrollToProduct,
     scrollToCollab,
     scrollToContact,
-    show,
 }) {
+const [invisible, setInvisible] = useState(true);
+
+const controlNavbar = () => {
+    if (window.scrollY > 100) {
+        setInvisible(false)
+    } else {
+        setInvisible(true)
+    }
+}
+
+useEffect(() => {
+    window.addEventListener('scroll',
+    controlNavbar)
+    return () => {
+        window.removeEventListener('scroll',
+        controlNavbar)
+    }
+}, [])
+
+
     return (
         <div className='block lg:box-border min-h-screen overflow-y-scroll relative landing-page'>
             <Navbar 
-                show={show}
+                invisible={invisible}
                 scrollToAbout={scrollToAbout}
                 scrollToCollab={scrollToCollab}
                 scrollToContact={scrollToContact}
@@ -29,8 +48,8 @@ function PageLayout({
                 id={'contact'}
                 ref={footerRef}
             />
-            <Copyrights />
-            <WhatsappChat />
+            {/* <Copyrights /> */}
+            {/* <WhatsappChat /> */}
         </div>
     )
 }

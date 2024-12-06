@@ -14,7 +14,7 @@ function ProductCard({
     const { Text } = Typography;
 
     const actionButtonClick = () => {
-        window.open('https://linktr.ee/acaloca', '_blank');
+        window.open('https://linktr.ee/oceaneyes', '_blank');
     }
 
     return (
