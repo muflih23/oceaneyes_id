@@ -30,9 +30,9 @@ function Footer({
                 <div className='flex flex-col gap-y-4 md:w-[50%]'>
                     <h3 className='font-bold text-foreground text-[20px]'>Quick Links</h3>
                     <div className='flex flex-col gap-y-2'>
-                        <h5 className='font-semibold text-textGray'>Hubungi Kami</h5>
-                        <h5 className='font-semibold text-textGray'>Profil Perusahaan</h5>
-                        <h5 className='font-semibold text-textGray'>Product Kami</h5>
+                        <h5 className='font-semibold text-textGray hover:cursor-pointer hover:text-secondary'>Hubungi Kami</h5>
+                        <h5 className='font-semibold text-textGray hover:cursor-pointer hover:text-secondary'>Profil Perusahaan</h5>
+                        <h5 className='font-semibold text-textGray hover:cursor-pointer hover:text-secondary'>Product Kami</h5>
                     </div>
                 </div>
             </div>

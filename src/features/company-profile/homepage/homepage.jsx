@@ -1,6 +1,9 @@
 import HeroSection from './section/hero-section';
 import { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import GoalSection from './section/goal-section';
+import UpdateSection from './section/update-section';
+import ServiceSection from './section/service-section';
 
 export default function Homepage() {
 
@@ -28,11 +31,11 @@ export default function Homepage() {
     }, [])
 
     return (
-        <div>
-            <HeroSection 
-                id={'hero'}
-                ref={heroRef}
-            />
+        <div className='flex flex-col w-full'>
+            <HeroSection />
+            <GoalSection />
+            <ServiceSection />
+            <UpdateSection />
         </div>
     );
 }

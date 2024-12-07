@@ -15,7 +15,7 @@ function Navbar({
     const [openMobileNav, setOpenMobileNav] = useState(false);
 
     return (
-        <div className={`flex w-full justify-between items-center px-8 xl:px-[67px] py-[22px] fixed left-0 top-0 ${invisible ? `navbar-faded` : `navbar-white`} lg:z-[8000] navbar-animated`}>
+        <div className={`flex w-full justify-between items-center px-8 xl:px-[67px] py-[22px] fixed left-0 top-0 ${invisible ? `navbar-faded` : `navbar-white`} z-[8000] navbar-animated`}>
             <DropdownMenu 
                 open={openMobileNav}
                 onClose={() => setOpenMobileNav(false)}

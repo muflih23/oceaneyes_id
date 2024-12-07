@@ -10,6 +10,7 @@ module.exports = {
       },
       backgroundImage: {
         'banner': `url(${process.env.REACT_APP_PUBLIC_URL}/banner.png)`,
+        'custom-gradient': `linear-gradient(360deg, #004F66 74.5%, #45A0BB 99%)`,
       },
       colors: {
         'neutral' : '#272727',
