@@ -2,6 +2,8 @@ import { Image } from 'antd'
 import React, { useState } from 'react'
 import DropdownMenu from './dropdown-menu'
 import NavLinks from './nav-links'
+import { useNavigate } from 'react-router-dom';
+import { RiMenu3Fill } from 'react-icons/ri';
 
 function Navbar({
     scrollToAbout,
@@ -13,9 +15,10 @@ function Navbar({
 }) {
 
     const [openMobileNav, setOpenMobileNav] = useState(false);
+    const navigate = useNavigate();
 
     return (
-        <div className={`flex w-full justify-between items-center px-8 xl:px-[67px] py-[22px] fixed left-0 top-0 ${invisible ? `navbar-faded` : `navbar-white`} z-[8000] navbar-animated`}>
+        <div className={`${openMobileNav ? `hidden` : `flex`} w-full justify-between items-center px-8 xl:px-[67px] py-[22px] fixed left-0 top-0 ${invisible ? `navbar-faded` : `navbar-white drop-shadow-lg`} z-[8000] navbar-animated`}>
             <DropdownMenu 
                 open={openMobileNav}
                 onClose={() => setOpenMobileNav(false)}
@@ -27,9 +30,7 @@ function Navbar({
             />
             <div className='flex w-[30%] lg:w-[20%] items-center'>
                 <button 
-                    onClick={() => document.getElementById('hero').scrollIntoView({
-                        behavior: 'smooth'
-                    })}
+                    onClick={() => navigate(`/`)}
                     className={`flex items-center`}
                 >
                     <Image 
@@ -44,19 +45,16 @@ function Navbar({
                     onClick={() => setOpenMobileNav(true)}
                     className='flex w-[32px] h-[32px] items-center text-surface lg:hidden'
                 >
-                    <Image 
-                        preview={false}
-                        src='/navbar-menu.svg'
-                        className='text-surface'
+                    <RiMenu3Fill 
+                        className={`${invisible ? `text-white` : `text-secondary`}`}
+                        size={24}
                     />
                 </button>
             </div>
-            <div className='hidden lg:flex w-[60%] justify-center items-center'>
+            <div className={'hidden lg:flex w-[60%] justify-center items-center'}>
                 <div className={`flex gap-x-6 items-center`}>
                     <NavLinks 
-                        action={() => document.getElementById('hero').scrollIntoView({
-                            behavior: 'smooth'
-                        })}
+                        action={() => navigate('/about')}
                         text={"About Us"}
                         invisible={invisible}
                     />

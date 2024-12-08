@@ -1,10 +1,9 @@
 import { Drawer, Dropdown, Image } from 'antd'
 import React from 'react'
-import PrimaryText from '../../atoms/primary-text'
-import SpanTextPrimary from '../../atoms/span-text'
 import { AiOutlineClose } from "react-icons/ai"
 
 import "./style.css";
+import { useNavigate } from 'react-router-dom'
 
 function DropdownMenu({
     open,
@@ -15,6 +14,8 @@ function DropdownMenu({
     scrollToCollab,
     scrollToContact,
 }) {
+    
+    const navigate = useNavigate()
 
     const items = [
         {
@@ -22,12 +23,10 @@ function DropdownMenu({
             label: (
                 <span 
                     onClick={() => {
-                        document.getElementById('hero').scrollIntoView({
-                            behavior: 'smooth'
-                        });
+                        navigate('/')
                         onClose();
                     }}
-                    className='font-semibold text-brown text-base'>
+                    className='font-semibold text-primary text-base'>
                     Home
                 </span>
             )
@@ -37,77 +36,14 @@ function DropdownMenu({
             label: (
                 <span
                     onClick={() => {
-                        document.getElementById('about').scrollIntoView({
-                            behavior: 'smooth'
-                        });
+                        navigate('/about')
                         onClose();
                     }}
-                    className='font-semibold text-brown text-base'>
+                    className='font-semibold text-primary text-base'>
                     About
                 </span>
             )
-        },
-        {
-            key: '3',
-            label: (
-                <span
-                    onClick={() => {
-                        document.getElementById('impact').scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                        onClose();
-                    }} 
-                    className='font-semibold text-brown text-base'>
-                    Impact
-                </span>
-            )
-        },
-        {
-            key: '4',
-            label: (
-                <span
-                    onClick={() => {
-                        document.getElementById('product').scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                        onClose();
-                    }} 
-                    className='font-semibold text-brown text-base'>
-                    Product
-                </span>
-            )
-        },
-        {
-            key: '5',
-            label: (
-                <span
-                    onClick={() => {
-                        document.getElementById('collab').scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                        onClose();
-                    }}
-                    className='font-semibold text-brown text-base'>
-                    Collabs
-                </span>
-            )
-        },
-        {
-            key: '6',
-            label: (
-                <span 
-                    onClick={() => {
-                        document.getElementById('contact').scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                        onClose();
-                    }}
-                    className='font-semibold text-brown text-base'>
-                    Contact
-                </span>
-            )
-        },
-        
+        },  
     ]
 
     return (
@@ -120,15 +56,15 @@ function DropdownMenu({
         >
             <div className='flex w-full flex-col gap-y-4'>
                 <div className='flex w-full justify-between items-center'>
-                    <div className='flex items-center justify-center w-[136px] h-[30px]'>
+                    <div className='flex items-center w-[136px] h-[30px]'>
                         <Image 
                             preview={false}
-                            src='/logo-faded.png'
-                            className='drop-shadow-filter'
+                            src={'/OceanEyesLogo_LG.png'}
+                            className={`!w-[40px] !h-[40px] lg:!w-[60px] lg:!h-[60px]`}
                         />
                     </div>
                     <button
-                        className='flex items-center justify-center text-brown'
+                        className='flex items-center justify-center text-primary'
                         onClick={onClose}
                     >
                         <AiOutlineClose 
@@ -136,7 +72,7 @@ function DropdownMenu({
                         />
                     </button>
                 </div>
-                <div className='flex flex-col items-center w-full gap-y-4 pt-6'>
+                <div className='flex flex-col w-full gap-y-4 pt-6'>
                     {items.map((record, index) => (
                         <>
                             {record.label}
