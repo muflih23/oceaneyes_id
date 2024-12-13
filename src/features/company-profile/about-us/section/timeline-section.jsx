@@ -35,9 +35,8 @@ export default function TimelineSection() {
 
   return (
     <SectionLayout classNames={`items-center bg-gradient-to-b from-white from- via-primary via-`}>
-        <Separator />
         <div className="flex flex-col justify-center items-center py-4 lg:py-10 gap-y-4">
-            <h2 className="font-extrabold text-foreground text-[25px] xl:text-[40px] text-center">Our Story in Indonesia</h2>
+            <h2 className="font-bold text-foreground text-[25px] xl:text-[40px] text-center">Our Story in Indonesia</h2>
         </div>
         <div className="flex flex-col items-center w-fit px-4 bg-white rounded-2xl drop-shadow-xl">
             <div className="flex flex-col items-center py-8 lg:max-w-[816px]">

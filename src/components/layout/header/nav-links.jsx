@@ -16,7 +16,7 @@ function NavLinks({
             onClick={action}
             className={`flex px-1 items-center justify-center`}
         >
-            <Text className={`font-primary text-base font-extrabold text-center ${invisible ? `text-white` : `text-foreground`} hover:text-secondary`}>
+            <Text className={`font-primary text-base font-semibold text-center ${invisible ? `text-white` : `text-foreground`} hover:text-secondary`}>
                 {text}
             </Text>
         </button>

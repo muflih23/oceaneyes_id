@@ -1,35 +1,15 @@
-import HeroSection from './section/hero-section';
-import { useEffect, useRef, useState } from 'react';
+import { lazy, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import GoalSection from './section/goal-section';
-import UpdateSection from './section/update-section';
-import ServiceSection from './section/service-section';
+// import HeroSection from './section/hero-section';
+// import GoalSection from './section/goal-section';
+// import UpdateSection from './section/update-section';
+// import ServiceSection from './section/service-section';
+const HeroSection = lazy(() => import('./section/hero-section'));
+const GoalSection = lazy(() => import('./section/goal-section'));
+const UpdateSection = lazy(() => import('./section/update-section'));
+const ServiceSection = lazy(() => import('./section/service-section'));
 
 export default function Homepage() {
-
-    const heroRef = useRef(null);
-
-    const [show, setShow] = useState(true);
-
-    const controlNavbar = () => {
-        if (window.scrollY > 100) {
-            setShow(false)
-        } else {
-            setShow(true)
-        }
-
-        // console.log(show);
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll',
-        controlNavbar)
-        return () => {
-            window.removeEventListener('scroll',
-            controlNavbar)
-        }
-    }, [])
-
     return (
         <div className='flex flex-col w-full'>
             <HeroSection />

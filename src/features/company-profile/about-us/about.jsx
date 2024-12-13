@@ -1,9 +1,19 @@
-import CompanySection from "./section/company-section";
-import AboutHeroSection from "./section/hero-section";
-import MisionSection from "./section/mision-section";
-import TimelineSection from "./section/timeline-section";
-import ValueSection from "./section/value-section";
-import VisionSection from "./section/vision-section";
+// import CompanySection from "./section/company-section";
+// import AboutHeroSection from "./section/hero-section";
+// import MisionSection from "./section/mision-section";
+// import TimelineSection from "./section/timeline-section";
+// import ValueSection from "./section/value-section";
+// import VisionSection from "./section/vision-section";
+
+import { lazy } from "react"
+
+const CompanySection = lazy(() => import("./section/company-section"));
+const AboutHeroSection = lazy(() => import("./section/hero-section"))
+const MisionSection = lazy(() => import("./section/mision-section"))
+const TimelineSection = lazy(() => import("./section/timeline-section"))
+const ValueSection = lazy(() => import("./section/value-section"))
+const VisionSection = lazy(() => import("./section/vision-section"))
+const MemberSection = lazy(() => import("./section/member-section"))
 
 export default function AboutPage() {
     return (
@@ -16,6 +26,7 @@ export default function AboutPage() {
             </div>
             <TimelineSection />
             <ValueSection />
+            <MemberSection />
         </div>
     )
 }

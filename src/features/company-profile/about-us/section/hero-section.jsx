@@ -9,6 +9,11 @@ function AboutHeroSection() {
                 <div className='flex max-w-[1120px]'>
                     <h1 className='font-hero font-semibold text-[36px] xl:text-[72px] text-white text-left'>We Bring Fishery Industry to the Next Level</h1>
                 </div>
+                <button
+                    className='w-[141px] md:w-[153px] lg:w-[200px] flex justify-center items-center py-3 rounded-[50px] text-white font-bold bg-secondary text-base lg:text-[20px]'
+                >
+                    Our Products
+                </button>
             </div>
         </div>
     )

@@ -3,11 +3,10 @@ import Separator from "../../../../components/atoms/separator/separator";
 export default function UpdateSection() {
     return (
         <div className="flex bg-custom-gradient w-full flex-col px-[22px] md:px-[45px] xl:px-[67px] py-20 lg:py-[90px]">
-            <Separator />
             <div className="flex flex-col justify-center items-center pt-4 lg:pt-10">
-                <h2 className="font-extrabold text-background text-[40px] text-center">Our Update</h2>
+                <h2 className="font-bold text-background text-[40px] text-center">Our Update</h2>
             </div>
-            <div className="flex flex-col md:flex-row justify-center items-center pt-4 lg:pt-10 gap-y-4 md:gap-x-4">
+            <div className="flex flex-col md:flex-row justify-center items-center pt-4 lg:pt-10 gap-y-4 md:gap-x-4 xl:gap-x-8">
                 <img src="/card-placeholder.jpg" className="rounded-xl shadow-lg w-[327px] md:w-[200px] xl:w-[327px]"/>
                 <img src="/card-placeholder.jpg" className="rounded-xl shadow-lg w-[327px] md:w-[200px] xl:w-[327px]"/>
                 <img src="/card-placeholder.jpg" className="rounded-xl shadow-lg w-[327px] md:w-[200px] xl:w-[327px]"/>

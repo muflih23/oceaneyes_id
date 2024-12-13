@@ -7,7 +7,7 @@ export default function GoalSection() {
     const carouselItems = [
         {
             element: (
-                <div className="w-[277px] h-[545px] md:w-[650px] md:h-[250px] lg:w-[800px] xl:w-[1000px] flex flex-col md:flex-row rounded-[16px] gap-y-4 shadow-xl">
+                <div className="bg-white w-[277px] h-[545px] md:w-[650px] md:h-[250px] lg:w-[800px] xl:w-[1200px] flex flex-col md:flex-row rounded-[16px] gap-y-4 shadow-md">
                     <img className="rounded-t-[16px] md:rounded-tr-none md:rounded-l-[16px] md:w-[300px]" src="/card-placeholder.jpg"/>
                     <div className="flex w-full px-4 flex-col gap-y-3 md:justify-center">
                         <h5 className="font-extrabold font-foreground text-base lg:text-[18px]">Optimalisasi Bisnis Penangkapan</h5>
@@ -19,7 +19,7 @@ export default function GoalSection() {
         },
         {
             element: (
-                <div className="w-[277px] h-[545px] md:w-[650px] md:h-[250px] lg:w-[800px] xl:w-[1000px] flex flex-col md:flex-row rounded-[16px] gap-y-4 shadow-xl">
+                <div className="bg-white w-[277px] h-[545px] md:w-[650px] md:h-[250px] lg:w-[800px] xl:w-[1200px] flex flex-col md:flex-row rounded-[16px] gap-y-4 shadow-md">
                     <img className="rounded-t-[16px] md:rounded-tr-none md:rounded-l-[16px] md:w-[300px]" src="/card-placeholder.jpg"/>
                     <div className="flex w-full px-4 flex-col gap-y-3 md:justify-center">
                         <h5 className="font-extrabold font-foreground text-base lg:text-[18px]">Sustainability</h5>
@@ -32,10 +32,9 @@ export default function GoalSection() {
     ]
 
     return (
-        <div className="flex w-full flex-col px-[22px] md:px-[45px] xl:px-[67px] pt-20 lg:pt-[90px]">
-            <Separator />
+        <div className="flex w-full flex-col px-[22px] md:px-[45px] xl:px-[67px] py-20 lg:py-[90px] bg-gradient-to-b from-primaryL to-white">
             <div className="flex flex-col justify-center items-center pt-4 lg:pt-10">
-                <h2 className="font-extrabold text-foreground text-[40px] text-center">What Problem We Try To Solve</h2>
+                <h2 className="font-bold text-foreground text-[40px] text-center">What Problem We Try To Solve</h2>
             </div>
             <div className="flex justify-center items-center pt-8 lg:pt-10">
                 <CustomCarousel 
