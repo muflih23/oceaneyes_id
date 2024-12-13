@@ -44,6 +44,32 @@ function DropdownMenu({
                 </span>
             )
         },  
+        {
+            key: '3',
+            label: (
+                <span
+                    onClick={() => {
+                        navigate('#')
+                        onClose();
+                    }}
+                    className='font-semibold text-primary text-base'>
+                    Our Updates
+                </span>
+            )
+        },  
+        {
+            key: '4',
+            label: (
+                <span
+                    onClick={() => {
+                        navigate('/product-and-services')
+                        onClose();
+                    }}
+                    className='font-semibold text-primary text-base'>
+                    Product and Services
+                </span>
+            )
+        },  
     ]
 
     return (

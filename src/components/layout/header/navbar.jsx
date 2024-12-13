@@ -59,24 +59,23 @@ function Navbar({
                         invisible={invisible}
                     />
                     <NavLinks 
-                        action={() => document.getElementById('about').scrollIntoView({
-                            behavior: 'smooth'
-                        })}
+                        action={() => navigate('#')}
                         text={"Our Activity"}
                         invisible={invisible}
                     />
                     <NavLinks 
-                        action={() => document.getElementById('about').scrollIntoView({
-                            behavior: 'smooth'
-                        })}
+                        action={() => navigate('/product-and-services')}
                         text={"Product And Services"}
                         invisible={invisible}
                     />
                     <NavLinks 
-                        action={() => document.getElementById('about').scrollIntoView({
-                            behavior: 'smooth'
-                        })}
+                        action={() => navigate('#')}
                         text={"Contact Us"}
+                        invisible={invisible}
+                    />
+                    <NavLinks 
+                        action={() => navigate('#')}
+                        text={"Fishermen Testimoni"}
                         invisible={invisible}
                     />
                 </div>
