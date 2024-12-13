@@ -1,0 +1,41 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Logs
+*.log
+
+# Docker files
+.dockerignore
+Dockerfile
+
+# Git files
+.git/
+.gitignore
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Yarn and npm lock files
+package-lock.json
+yarn.lock
+
+# IDE and editor folders
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
