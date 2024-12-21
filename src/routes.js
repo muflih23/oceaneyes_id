@@ -19,4 +19,10 @@ export const routes = [
         name: "product-and-services",
         requireAuth: false,
     },
+    {
+        path: "/contact-us",
+        component: lazy(() => import('./features/company-profile/contact-us/contact-us.jsx')),
+        name: "contact-us",
+        requireAuth: false,
+    },
 ]

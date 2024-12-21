@@ -69,7 +69,7 @@ function Navbar({
                         invisible={invisible}
                     />
                     <NavLinks 
-                        action={() => navigate('#')}
+                        action={() => navigate('/contact-us')}
                         text={"Contact Us"}
                         invisible={invisible}
                     />

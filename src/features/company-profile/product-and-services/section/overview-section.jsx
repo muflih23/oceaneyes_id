@@ -8,14 +8,14 @@ export default function OverviewSection() {
                     <h2 className="font-bold text-foreground text-[25px] xl:text-[40px] text-center">Elevate Your Bussiness to the Next Level and Make More with Us</h2>
                 </div>
             </SectionLayout>
-            <SectionLayout classNames={`bg-primary md:bg-white !py-[60px] md:!py-5`}>
-                <div className="flex flex-col w-full gap-y-7 justify-center items-center md:items-start md:rounded-2xl md:bg-primary md:shadow-xl md:p-10">
-                    <h3 className="font-semibold text-white text-[28px] text-left">Avoid Risk and Increase your Safety</h3>
+            <SectionLayout classNames={`bg-primary md:bg-gradient-to-b md:from-white md:to-primaryL !py-[60px] md:!py-5`}>
+                <div className="flex flex-col w-full gap-y-7 justify-center items-center md:items-start md:p-10">
+                    <h3 className="font-semibold text-white md:text-foreground text-[28px] text-left">Avoid Risk and Increase your Safety</h3>
                     <div className="flex w-full flex-col gap-y-7 md:flex-row gap-x-12">
                         <img src="/card-placeholder.jpg" className="w-[331px] md:w-[200px] lg:w-[368px] rounded-lg"/>
                         <img src="/card-placeholder.jpg" className="w-[331px] md:w-[200px] lg:w-[368px] rounded-lg"/>
                     </div>
-                    <h4 className="text-white text-base">Dengan teknologi canggih dan akses data satelit, kami mampu membuat pemodelan yang presisi dengan berbagai indikator. Pemodelan ini memberikan informasi lengkap tentang kondisi laut terkini hingga perkiraan hingga 5 hari ke depan. Informasi tersebut dapat dimanfaatkan oleh nelayan untuk merancang rute, mengambil keputusan, atau mempertimbangkan faktor keamanan selama melaut.</h4>
+                    <h4 className="text-white md:text-foreground text-base">Dengan teknologi canggih dan akses data satelit, kami mampu membuat pemodelan yang presisi dengan berbagai indikator. Pemodelan ini memberikan informasi lengkap tentang kondisi laut terkini hingga perkiraan hingga 5 hari ke depan. Informasi tersebut dapat dimanfaatkan oleh nelayan untuk merancang rute, mengambil keputusan, atau mempertimbangkan faktor keamanan selama melaut.</h4>
                     <button
                     className='w-fit px-4 flex justify-center items-center py-3 rounded-[50px] text-white font-bold bg-secondary text-base'
                     >
@@ -23,8 +23,8 @@ export default function OverviewSection() {
                     </button>
                 </div>
             </SectionLayout>
-            <SectionLayout classNames={`bg-white !py-[60px] md:!py-5`}>
-                <div className="flex flex-col w-full gap-y-7 justify-center items-center md:bg-[#DEE5E8] md:items-end md:rounded-2xl md:shadow-xl md:p-10">
+            <SectionLayout classNames={`bg-white md:bg-gradient-to-b md:from-primaryL md:to-white !py-[60px] md:!py-5`}>
+                <div className="flex flex-col w-full gap-y-7 justify-center items-center md:items-end md:p-10">
                     <h3 className="font-semibold text-foreground text-[28px] text-left md:text-right">More Efficient with Lower Effort, Time and Cost </h3>
                     <div className="flex w-full flex-col gap-y-7 md:flex-row md:justify-end gap-x-12">
                         <img src="/card-placeholder.jpg" className="w-[331px] md:w-[200px] lg:w-[368px] rounded-lg"/>

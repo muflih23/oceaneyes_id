@@ -5,7 +5,7 @@
 // import ValueSection from "./section/value-section";
 // import VisionSection from "./section/vision-section";
 
-import { lazy } from "react"
+import { lazy, useEffect } from "react"
 
 const CompanySection = lazy(() => import("./section/company-section"));
 const AboutHeroSection = lazy(() => import("./section/hero-section"))
@@ -16,6 +16,11 @@ const VisionSection = lazy(() => import("./section/vision-section"))
 const MemberSection = lazy(() => import("./section/member-section"))
 
 export default function AboutPage() {
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    })    
+
     return (
         <div className="flex flex-col w-full">
             <AboutHeroSection />

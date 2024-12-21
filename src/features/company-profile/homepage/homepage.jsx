@@ -10,6 +10,11 @@ const UpdateSection = lazy(() => import('./section/update-section'));
 const ServiceSection = lazy(() => import('./section/service-section'));
 
 export default function Homepage() {
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    })
+
     return (
         <div className='flex flex-col w-full'>
             <HeroSection />

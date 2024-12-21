@@ -1,5 +1,3 @@
-import { Image } from "antd";
-import Separator from "../../../../components/atoms/separator/separator";
 import CustomCarousel from "../../../../components/molecules/custom-carousel/carousel";
 
 export default function GoalSection() {

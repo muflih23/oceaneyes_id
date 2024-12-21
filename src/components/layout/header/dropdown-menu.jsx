@@ -70,6 +70,19 @@ function DropdownMenu({
                 </span>
             )
         },  
+        {
+            key: '5',
+            label: (
+                <span
+                    onClick={() => {
+                        navigate('/contact-us')
+                        onClose();
+                    }}
+                    className='font-semibold text-primary text-base'>
+                    Contact Us
+                </span>
+            )
+        },  
     ]
 
     return (
