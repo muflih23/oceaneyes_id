@@ -2,14 +2,14 @@ import { Typography } from 'antd'
 import React from 'react'
 
 function SectionTitle({
-    children,
-    centered,
+    text,
+    className
 }) {
 
     const { Text } = Typography;
 
     return (
-        <h2 className={`font-black text-[36px] lg:text-[64px] font-primary text-brown ${centered ? `text-center` : `text-left`}`}>{children}</h2>
+        <h2 className={`font-semibold text-foreground text-[24px] lg:text-[28px] xl:text-[32px] text-center ${className}`}>{text}</h2>
     )
 }
 

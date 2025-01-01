@@ -1,3 +1,4 @@
+import SectionTitle from "../../../../components/atoms/section-title";
 import CustomCarousel from "../../../../components/molecules/custom-carousel/carousel";
 
 export default function GoalSection() {
@@ -30,11 +31,14 @@ export default function GoalSection() {
     ]
 
     return (
-        <div className="flex w-full flex-col px-[22px] md:px-[45px] xl:px-[67px] py-20 lg:py-[90px] bg-gradient-to-b from-primaryL to-white">
-            <div className="flex flex-col justify-center items-center pt-4 lg:pt-10">
-                <h2 className="font-bold text-foreground text-[40px] text-center">What Problem We Try To Solve</h2>
+        <div className="flex w-full flex-col px-[22px] md:px-[45px] xl:px-[67px] py-10 bg-gradient-to-b from-primary to-white">
+            <div className="flex flex-col justify-center items-center">
+                <SectionTitle 
+                    text={"What Problem We Try to Solve"} 
+                    className={`!text-background`}
+                />
             </div>
-            <div className="flex justify-center items-center pt-8 lg:pt-10">
+            <div className="flex justify-center items-center pt-5">
                 <CustomCarousel 
                     items={carouselItems}
                     autoSlide={true}

@@ -36,7 +36,7 @@ function Navbar({
                     <Image 
                         preview={false}
                         src={'/OceanEyesLogo_LG.png'}
-                        className={`!w-[40px] !h-[40px] lg:!w-[60px] lg:!h-[60px]`}
+                        className={`!w-[40px] !h-[40px]`}
                     />
                 </button>
             </div>
@@ -51,7 +51,7 @@ function Navbar({
                     />
                 </button>
             </div>
-            <div className={'hidden lg:flex w-[60%] justify-center items-center'}>
+            <div className={'hidden lg:flex w-[80%] justify-end items-center'}>
                 <div className={`flex gap-x-6 items-center`}>
                     <NavLinks 
                         action={() => navigate('/about')}
@@ -79,9 +79,6 @@ function Navbar({
                         invisible={invisible}
                     />
                 </div>
-            </div>
-            <div className='hidden lg:flex w-[20%] justify-center items-center'>
-
             </div>
         </div>
     )

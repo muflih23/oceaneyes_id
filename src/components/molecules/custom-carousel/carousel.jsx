@@ -95,7 +95,7 @@ const CustomCarousel = ({
       </div> */}
 
       {/* Dot Indicators */}
-      <div className="flex justify-center mt-4 space-x-2">
+      <div className="flex justify-center mt-4 space-x-4">
         {items.map((item, index) => (
           <button
             key={index}
