@@ -4,9 +4,15 @@ import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 const CustomCarousel = ({ 
   items = [], 
   autoSlide = false, 
-  autoSlideInterval = 3000 
+  autoSlideInterval = 3000,
+  colorScheme = 'primary' 
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const PRIMARY_ACTIVE = `text-primary font-extrabold lg:text-[20px]`
+  const PRIMARY_INACTIVE = `text-foreground lg:text-[20px]`
+  const SECONDARY_ACTIVE = `text-secondary font-extrabold lg:text-[20px]`
+  const SECONDARY_INACTIVE = `text-white lg:text-[20px]`
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
@@ -102,8 +108,8 @@ const CustomCarousel = ({
             onClick={() => setCurrentIndex(index)}
             className={`
               ${currentIndex === index 
-                ? 'text-primary font-extrabold lg:text-[20px]' 
-                : 'text-foreground lg:text-[20px]'}
+                ? `${colorScheme != 'primary' ? SECONDARY_ACTIVE : PRIMARY_ACTIVE}` 
+                : `${colorScheme != 'primary' ? SECONDARY_INACTIVE : PRIMARY_INACTIVE}`}
             `}
           >
             {item.title}

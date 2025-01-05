@@ -26,6 +26,7 @@ module.exports = {
         'primaryL2' : '#52BEE6',
         'primaryPale' : '#84AFBB',
         'primaryGray' : '#9EB1B6',
+        'primaryLGray': '#f6f8f8',
         'foreground' : '#06222D',
         'background' : '#DEE5E8',
         'secondary' : '#F07B4F',

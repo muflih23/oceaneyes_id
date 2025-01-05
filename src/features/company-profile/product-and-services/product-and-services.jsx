@@ -17,8 +17,8 @@ export default function ProductAndServices() {
             <ProductAndServicesHero />
             <OverviewSection />
             <ProvideSection />
-            <CTASection />
             <PSProductSection />
+            <CTASection />
         </div>
     )
 }

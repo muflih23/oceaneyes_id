@@ -1,5 +1,6 @@
 import { lazy, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import PSProductSection from '../product-and-services/section/product-section';
 // import HeroSection from './section/hero-section';
 // import GoalSection from './section/goal-section';
 // import UpdateSection from './section/update-section';
@@ -19,7 +20,7 @@ export default function Homepage() {
         <div className='flex flex-col w-full'>
             <HeroSection />
             <GoalSection />
-            <ServiceSection />
+            <PSProductSection />
             <UpdateSection />
         </div>
     );

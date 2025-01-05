@@ -1,3 +1,4 @@
+import SectionTitle from "../../../../components/atoms/section-title";
 import SectionLayout from "../../../../components/layout/section-layout";
 import CustomCarousel from "../../../../components/molecules/custom-carousel/carousel";
 import { useNavigate } from 'react-router-dom';
@@ -40,13 +41,17 @@ export default function CTASection() {
     ]
 
     return (
-        <SectionLayout>
-            <h2 className="font-bold text-foreground text-[25px] xl:text-[40px] text-center">Collaborate With Us</h2>
+        <SectionLayout classNames={`bg-primary`}>
+            <SectionTitle 
+                text={"Collaborate With Us"}
+                className={`text-white`}
+            />
             <div className="flex justify-center items-center pt-8 lg:pt-10">
                 <CustomCarousel 
                     items={carouselItems}
                     autoSlide={true}
                     autoSlideInterval={8000}
+                    colorScheme="secondary"
                 />
             </div>
         </SectionLayout>

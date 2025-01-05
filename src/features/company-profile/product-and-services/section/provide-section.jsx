@@ -2,31 +2,53 @@ import SectionLayout from "../../../../components/layout/section-layout";
 import { PiShieldStar } from "react-icons/pi";
 import { BsShieldCheck } from "react-icons/bs";
 import { HiArrowsPointingIn } from "react-icons/hi2";
+import SectionTitle from "../../../../components/atoms/section-title";
 
 export default function ProvideSection() {
     return (
-        <div className="flex flex-col w-full">
-            <SectionLayout classNames={`bg-[#F9F9F9] !py-[60px]`}>
-                <h2 className="font-bold text-foreground text-[25px] xl:text-[40px] text-center">Your Trust is Our Commitment</h2>
+        <div className="flex flex-col w-full lg:bg-primaryLGray">
+            <SectionLayout>
+                <SectionTitle 
+                    text={"Your Trust is Our Commitment"}
+                />
             </SectionLayout>
             <SectionLayout>
-                <div className="flex flex-col w-full justify-center items-center gap-y-[30px]">
-                    <div className="flex flex-col lg:flex-row lg:gap-x-[218px] w-full justify-center items-center lg:items-start gap-y-[30px]">
-                        <div className="flex flex-col items-center gap-y-4 max-w-[331px]">
-                            <PiShieldStar size={59} className="text-primary"/>
+                <div className="flex flex-col w-full justify-center items-center gap-y-[30px] lg:hidden">
+                    <div className="flex flex-col w-full justify-center items-center gap-y-[30px] lg:grid lg:grid-cols-3 lg:gap-[30px] xl:max-w-[1000px]">
+                        <div className="flex flex-col h-full justify-start items-center gap-y-4 max-w-[331px]">
+                            <PiShieldStar className="text-primary text-[59px] lg:text-[50px]"/>
                             <h5 className="text-secondary font-bold text-[20px] text-center">Exclusivity</h5>
-                            <h6 className="text-foreground text-base text-center">The model will be built only for 1 company based on the company's own data catch.</h6>
+                            <h6 className="text-foreground text-base text-center">The model will be developed for a single company, tailored to analyze its fish catch data and ensure accuracy based on its unique operations.</h6>
                         </div>
-                        <div className="flex flex-col items-center gap-y-4 max-w-[331px]">
-                            <BsShieldCheck size={59} className="text-primary"/>
+                        <div className="flex flex-col h-full justify-start items-center gap-y-4 max-w-[331px]">
+                            <BsShieldCheck className="text-primary text-[59px] lg:text-[50px]"/>
                             <h5 className="text-secondary font-bold text-[20px] text-center">Data Security</h5>
-                            <h6 className="text-foreground text-base text-center">Every data only will use to build the own company model. We guarantee that we will not share or use to other's occasion</h6>
+                            <h6 className="text-foreground text-base text-center">Each dataset will be used exclusively to develop the respective company's model. We guarantee that the data will not be shared or utilized for any other purposes.</h6>
+                        </div>
+                        <div className="flex flex-col h-full justify-start items-center gap-y-4 max-w-[331px]">
+                            <HiArrowsPointingIn className="text-primary text-[59px] lg:text-[50px]"/>
+                            <h5 className="text-secondary font-bold text-[20px] text-center">Accuracy</h5>
+                            <h6 className="text-foreground text-base text-center">The accuracy of the results improves with the quantity of collected data. Coverage areas are limited to regions with data collection history and customer requests.</h6>
                         </div>
                     </div>
-                    <div className="flex flex-col justify-center items-center gap-y-4 max-w-[331px]">
-                        <HiArrowsPointingIn size={59} className="text-primary"/>
-                        <h5 className="text-secondary font-bold text-[20px] text-center">Accurate</h5>
-                        <h6 className="text-foreground text-base text-center">The more catch data you have, the higher accuration you will have. The area cover will only be around the data catch history and customer Request </h6>
+                </div>
+                <div className="hidden lg:flex flex-col w-full justify-center items-center gap-y-[30px]">
+                    <div className="flex flex-col w-full justify-center items-center lg:grid lg:grid-cols-3 lg:gap-[2px] xl:max-w-[1000px]">
+                        <div className="flex flex-col h-full justify-start items-start gap-y-4 max-w-[331px] bg-white p-6 shadow-md rounded-l-md">
+                            <PiShieldStar className="text-primary text-[28px]"/>
+                            <h5 className="text-foreground font-bold text-[20px] text-left">Exclusivity</h5>
+                            <h6 className="text-textGray text-base text-left">The model will be developed for a single company, tailored to analyze its fish catch data and ensure accuracy based on its unique operations.</h6>
+                        </div>
+                        <div className="flex flex-col h-full justify-start items-start gap-y-4 max-w-[331px] bg-white p-6 shadow-md">
+                            <BsShieldCheck className="text-primary text-[28px]"/>
+                            <h5 className="text-foreground font-bold text-[20px] text-left">Data Security</h5>
+                            <h6 className="text-textGray text-base text-left">Each dataset will be used exclusively to develop the respective company's model. We guarantee that the data will not be shared or utilized for any other purposes.</h6>
+                        </div>
+                        <div className="flex flex-col h-full justify-start items-start gap-y-4 max-w-[331px] bg-white p-6 shadow-md rounded-r-md">
+                            <HiArrowsPointingIn className="text-primary text-[28px]"/>
+                            <h5 className="text-foreground font-bold text-[20px] text-left">Accuracy</h5>
+                            <h6 className="text-textGray text-base text-left">The accuracy of the results improves with the quantity of collected data. Coverage areas are limited to regions with data collection history and customer requests.</h6>
+                        </div>
                     </div>
                 </div>
             </SectionLayout>
