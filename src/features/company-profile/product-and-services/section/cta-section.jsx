@@ -41,7 +41,7 @@ export default function CTASection() {
     ]
 
     return (
-        <SectionLayout classNames={`bg-primary`}>
+        <SectionLayout classNames={`bg-gradient-to-b from-primaryL to-primary`}>
             <SectionTitle 
                 text={"Collaborate With Us"}
                 className={`text-white`}
