@@ -24,7 +24,7 @@ module.exports = {
         'primary' : '#004F66',
         'primaryL' : '#45A0BB',
         'primaryL2' : '#52BEE6',
-        'primaryPale' : '#84AFBB',
+        'primaryPale' : '#c5e9f7',
         'primaryGray' : '#9EB1B6',
         'primaryLGray': '#f6f8f8',
         'foreground' : '#06222D',

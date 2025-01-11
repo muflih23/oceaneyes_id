@@ -4,6 +4,7 @@ import DropdownMenu from './dropdown-menu'
 import NavLinks from './nav-links'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { RiMenu3Fill } from 'react-icons/ri';
+import { UNIQUE_ROUTES } from '../../../constants/unique-routes';
 
 function Navbar({
     scrollToAbout,
@@ -47,7 +48,7 @@ function Navbar({
                     className='flex w-[32px] h-[32px] items-center text-surface lg:hidden'
                 >
                     <RiMenu3Fill 
-                        className={`${invisible && location.pathname != '/fnavi' ? `text-white` : `text-secondary`}`}
+                        className={`${invisible && !UNIQUE_ROUTES.includes(location.pathname) ? `text-white` : `text-secondary`}`}
                         size={24}
                     />
                 </button>
@@ -57,27 +58,27 @@ function Navbar({
                     <NavLinks 
                         action={() => navigate('/about')}
                         text={"About Us"}
-                        invisible={invisible && location.pathname != '/fnavi'}
+                        invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
                     />
                     <NavLinks 
                         action={() => navigate('#')}
                         text={"Our Activity"}
-                        invisible={invisible && location.pathname != '/fnavi'}
+                        invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
                     />
                     <NavLinks 
                         action={() => navigate('/product-and-services')}
                         text={"Product And Services"}
-                        invisible={invisible && location.pathname != '/fnavi'}
+                        invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
                     />
                     <NavLinks 
                         action={() => navigate('/contact-us')}
                         text={"Contact Us"}
-                        invisible={invisible && location.pathname != '/fnavi'}
+                        invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
                     />
                     <NavLinks 
                         action={() => navigate('#')}
                         text={"Fishermen Testimoni"}
-                        invisible={invisible && location.pathname != '/fnavi'}
+                        invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
                     />
                 </div>
             </div>
