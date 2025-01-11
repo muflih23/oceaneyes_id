@@ -2,7 +2,7 @@ import { Image } from 'antd'
 import React, { useState } from 'react'
 import DropdownMenu from './dropdown-menu'
 import NavLinks from './nav-links'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { RiMenu3Fill } from 'react-icons/ri';
 
 function Navbar({
@@ -16,6 +16,7 @@ function Navbar({
 
     const [openMobileNav, setOpenMobileNav] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
 
     return (
         <div className={`${openMobileNav ? `hidden` : `flex`} w-full justify-between items-center px-8 xl:px-[67px] py-[22px] fixed left-0 top-0 ${invisible ? `navbar-faded` : `navbar-white drop-shadow-lg`} z-[8000] navbar-animated`}>
@@ -46,7 +47,7 @@ function Navbar({
                     className='flex w-[32px] h-[32px] items-center text-surface lg:hidden'
                 >
                     <RiMenu3Fill 
-                        className={`${invisible ? `text-white` : `text-secondary`}`}
+                        className={`${invisible && location.pathname != '/fnavi' ? `text-white` : `text-secondary`}`}
                         size={24}
                     />
                 </button>
@@ -56,27 +57,27 @@ function Navbar({
                     <NavLinks 
                         action={() => navigate('/about')}
                         text={"About Us"}
-                        invisible={invisible}
+                        invisible={invisible && location.pathname != '/fnavi'}
                     />
                     <NavLinks 
                         action={() => navigate('#')}
                         text={"Our Activity"}
-                        invisible={invisible}
+                        invisible={invisible && location.pathname != '/fnavi'}
                     />
                     <NavLinks 
                         action={() => navigate('/product-and-services')}
                         text={"Product And Services"}
-                        invisible={invisible}
+                        invisible={invisible && location.pathname != '/fnavi'}
                     />
                     <NavLinks 
                         action={() => navigate('/contact-us')}
                         text={"Contact Us"}
-                        invisible={invisible}
+                        invisible={invisible && location.pathname != '/fnavi'}
                     />
                     <NavLinks 
                         action={() => navigate('#')}
                         text={"Fishermen Testimoni"}
-                        invisible={invisible}
+                        invisible={invisible && location.pathname != '/fnavi'}
                     />
                 </div>
             </div>

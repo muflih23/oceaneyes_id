@@ -16,7 +16,7 @@ function PageLayout({
 const [invisible, setInvisible] = useState(true);
 
 const controlNavbar = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 80) {
         setInvisible(false)
     } else {
         setInvisible(true)

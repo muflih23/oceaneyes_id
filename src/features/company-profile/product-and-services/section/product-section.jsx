@@ -1,10 +1,12 @@
 import { useState } from "react";
 import SectionTitle from "../../../../components/atoms/section-title";
 import SectionLayout from "../../../../components/layout/section-layout";
+import { useNavigate } from "react-router-dom";
 
 export default function PSProductSection() {
 
     const [activeTab, setActiveTab] = useState(0);
+    const navigate = useNavigate();
 
     return (
         <div className="flex flex-col w-full py-10 xl:pt-[90px]">
@@ -97,6 +99,7 @@ export default function PSProductSection() {
                                     <h3 className="font-medium text-white text-base">Mengurangi resiko baik itu keamanan ataupun kerugian operasional dalam proses memancing. dikarenakan oceaneyes bisa memberikan gambaran menyeluruh terkait kondisi laut sekitar dan yang ingin dituju oleh nelayan baik itu historikal nya atau forecasting sampai 5 hari dimasa depantampilan yang sangat mudah difahami serta kebebasan dalam setting, memungkinkan nelayan untuk menyesuaikan dengan kebutuhan masing masing Fnavi akan segera hadir disemua system smartphone baik andoroid ataupun IOS Bagaimana Fnavi bisa Memberikan Anda gambaran Kondisi Laut Paling Tepat</h3>
                                 </div>
                                 <button
+                                    onClick={() => navigate('/fnavi')}
                                     className="bg-secondary rounded-2xl py-2 flex justify-center items-center w-[141px] text-white font-bold text-sm"
                                 >
                                     Lihat Detail

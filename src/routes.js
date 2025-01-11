@@ -25,4 +25,10 @@ export const routes = [
         name: "contact-us",
         requireAuth: false,
     },
+    {
+        path: "/fnavi",
+        component: lazy(() => import('./features/company-profile/fNavi/FNavi.jsx')),
+        name: "fnavi",
+        requireAuth: false,
+    },
 ]
