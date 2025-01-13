@@ -13,7 +13,6 @@ export default function ContactUs() {
   return (
     <div className="flex flex-col w-full">
       <ContactHeroSection />
-      <ContactBodySection />
     </div>
   )
 }

@@ -61,7 +61,7 @@ function Navbar({
                         invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
                     />
                     <NavLinks 
-                        action={() => navigate('#')}
+                        action={() => navigate('/news')}
                         text={"Our Activity"}
                         invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
                     />
