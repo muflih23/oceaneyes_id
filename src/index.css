@@ -85,6 +85,27 @@ button img .no-shadow {
   display: none !important;
 }
 
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination .ant-pagination-item-active {
+  background-color: #004F66 !important;
+  border-color: #004F66 !important;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination .ant-pagination-item-active > a {
+  color: #ffffff !important;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-dropdown {
+  z-index: 8000 !important;
+}
+
+.ant-dropdown .ant-dropdown-menu {
+  background-color: #ffffff !important;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-dropdown .ant-dropdown-menu {
+  background-color: #ffffff !important;
+}
+
 @media(min-width: 768px) {
   .carouselImage {
     width: 457px !important;
