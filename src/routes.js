@@ -32,6 +32,12 @@ export const routes = [
     requireAuth: false,
   },
   {
+    path: "/fishing-ground-map",
+    component: lazy(() => import('./features/company-profile/fishing-ground-map/FishingGroundMap.jsx')),
+    name: "fishing-ground-map",
+    requireAuth: false,
+  },
+  {
     path: "/news",
     component: lazy(() => import('./features/company-profile/news-and-update/news-and-update.jsx')),
     name: "news",

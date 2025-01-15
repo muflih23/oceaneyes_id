@@ -1,5 +1,5 @@
 export const UNIQUE_ROUTES = [
   '/fnavi',
-  '/fishing-ground-map',
   '/news',
+  '/fishing-ground-map',
 ]

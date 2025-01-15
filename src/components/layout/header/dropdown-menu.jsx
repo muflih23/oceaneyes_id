@@ -66,7 +66,7 @@ function DropdownMenu({
             onClose();
           }}
           className='font-semibold text-primary text-base'>
-          Product and Services
+          Service Overview
         </span>
       )
     },
@@ -75,11 +75,50 @@ function DropdownMenu({
       label: (
         <span
           onClick={() => {
+            navigate('/fnavi')
+            onClose();
+          }}
+          className='font-semibold text-primary text-base'>
+          FNavi
+        </span>
+      )
+    },
+    {
+      key: '6',
+      label: (
+        <span
+          onClick={() => {
+            navigate('/fishing-ground-map')
+            onClose();
+          }}
+          className='font-semibold text-primary text-base'>
+          Fishing Ground Map
+        </span>
+      )
+    },
+    {
+      key: '7',
+      label: (
+        <span
+          onClick={() => {
             navigate('/contact-us')
             onClose();
           }}
           className='font-semibold text-primary text-base'>
           Contact Us
+        </span>
+      )
+    },
+    {
+      key: '8',
+      label: (
+        <span
+          onClick={() => {
+            navigate('/fishermen-testimonials')
+            onClose();
+          }}
+          className='font-semibold text-primary text-base'>
+          Fishermen Testimoni
         </span>
       )
     },
