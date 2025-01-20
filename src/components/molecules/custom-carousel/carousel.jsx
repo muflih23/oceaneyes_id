@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
-const CustomCarousel = ({ 
-  items = [], 
-  autoSlide = false, 
+const CustomCarousel = ({
+  items = [],
+  autoSlide = false,
   autoSlideInterval = 3000,
-  colorScheme = 'primary' 
+  colorScheme = 'primary',
+  withNavigation = false,
+  withDots = true,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -15,13 +17,13 @@ const CustomCarousel = ({
   const SECONDARY_INACTIVE = `text-white lg:text-[20px]`
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       (prevIndex + 1) % items.length
     );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? items.length - 1 : prevIndex - 1
     );
   };
@@ -49,31 +51,31 @@ const CustomCarousel = ({
     <div className="relative w-full max-w-4xl xl:max-w-full mx-auto xl:mx-0">
       {/* Slide Container */}
       <div className="overflow-hidden w-full relative h-[550px] md:h-[300px]"
-       style={{
-        margin: 0,
-        padding: 0,
-       }}>
-        <div 
+        style={{
+          margin: 0,
+          padding: 0,
+        }}>
+        <div
           className="flex transition-transform w-full h-full duration-500 ease-in-out"
-            style={{ 
-              transform: `translateX(-${currentIndex * 100}%)`,
-              // width: `${items.length * 100}%`
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+            // width: `${items.length * 100}%`
           }}
         >
           {items.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="flex items-center justify-center"
               style={{
                 minWidth: '100%', // Set lebar berdasarkan viewport
-                height: '100%', 
+                height: '100%',
               }}
             >
-              <div 
+              <div
                 className="w-full h-full flex items-center justify-center bg-green-200"
                 style={{
-                  display: 'flex', 
-                  alignItems: 'center', 
+                  display: 'flex',
+                  alignItems: 'center',
                   justifyContent: 'center'
                 }}
               >
@@ -85,20 +87,24 @@ const CustomCarousel = ({
       </div>
 
       {/* Navigation Buttons */}
-      {/* <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-4">
-        <button  
-          onClick={prevSlide}
-          className="bg-white/50 hover:bg-white/75"
-        >
-          <BsChevronLeft className="h-6 w-6" />
-        </button>
-        <button 
-          onClick={nextSlide}
-          className="bg-white/50 hover:bg-white/75"
-        >
-          <BsChevronRight className="h-6 w-6" />
-        </button>
-      </div> */}
+      {
+        withNavigation && (
+          <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between">
+            <button
+              onClick={prevSlide}
+              className="bg-sky-950 text-white p-1 rounded-full hover:bg-secondary"
+            >
+              <BsChevronLeft className="h-4 w-4" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="bg-sky-950 text-white p-1 rounded-full hover:bg-secondary"
+            >
+              <BsChevronRight className="h-4 w-4" />
+            </button>
+          </div>
+        )
+      }
 
       {/* Dot Indicators */}
       <div className="flex justify-center mt-4 space-x-4">
@@ -107,8 +113,8 @@ const CustomCarousel = ({
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`
-              ${currentIndex === index 
-                ? `${colorScheme != 'primary' ? SECONDARY_ACTIVE : PRIMARY_ACTIVE}` 
+              ${currentIndex === index
+                ? `${colorScheme != 'primary' ? SECONDARY_ACTIVE : PRIMARY_ACTIVE}`
                 : `${colorScheme != 'primary' ? SECONDARY_INACTIVE : PRIMARY_INACTIVE}`}
             `}
           >

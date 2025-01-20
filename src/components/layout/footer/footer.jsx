@@ -13,7 +13,7 @@ function Footer({
   return (
     <div className='flex flex-col w-full bg-primary px-[22px] md:px-8 xl:px-[67px] py-12 gap-y-10'>
       <Separator />
-      <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8'>
+      <div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8 xl:gap-10'>
         <div className='flex flex-col gap-y-4 w-full'>
           <div className='flex flex-col'>
             <h3 className='font-bold text-secondary text-[20px]'>Ocean Eyes,.co.:Ltd</h3>
@@ -27,12 +27,6 @@ function Footer({
             </ul>
           </div>
         </div>
-        <div className='w-full'>
-          <video className='w-2/3 md:w-1/2 lg:w-2/3' autoPlay muted loop>
-            <source src='https://storage.oceaneyes.id/oceaneyes/footage/Adventure%20Instagram%20Post.mp4' type='video/mp4'/>
-            Your browser does not support the video tag.
-          </video>
-        </div>
         <div className='flex flex-col gap-y-4 w-full'>
           <h3 className='font-bold text-secondary text-[20px]'>Quick Links</h3>
           <div className='flex flex-col gap-y-2'>
@@ -40,6 +34,12 @@ function Footer({
             <h5 className='font-light text-white hover:cursor-pointer hover:text-primaryL'>Profil Perusahaan</h5>
             <h5 className='font-light text-white hover:cursor-pointer hover:text-primaryL'>Product Kami</h5>
           </div>
+        </div>
+        <div className='w-full'>
+          <video className='w-2/3 md:w-1/2 lg:w-2/3' autoPlay muted loop>
+            <source src='https://storage.oceaneyes.id/oceaneyes/footage/Adventure%20Instagram%20Post.mp4' type='video/mp4'/>
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>

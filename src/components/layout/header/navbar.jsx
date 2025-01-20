@@ -130,7 +130,7 @@ function Navbar({
             active={location.pathname === '/contact-us'}
           />
           <NavLinks
-            action={() => navigate('#')}
+            action={() => navigate('/fishermen-testimoni')}
             text={"Fishermen Testimoni"}
             invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
             active={location.pathname === '/fishermen-testimoni'}

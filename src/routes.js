@@ -43,4 +43,10 @@ export const routes = [
     name: "news",
     requireAuth: false,
   },
+  {
+    path: "/fishermen-testimoni",
+    component: lazy(() => import('./features/company-profile/fishermen-testimoni/FishermenTestimoni.jsx')),
+    name: "fishermen-testimoni",
+    requireAuth: false,
+  },
 ]

@@ -114,7 +114,7 @@ function DropdownMenu({
       label: (
         <span
           onClick={() => {
-            navigate('/fishermen-testimonials')
+            navigate('/fishermen-testimoni')
             onClose();
           }}
           className='font-semibold text-primary text-base'>
@@ -128,7 +128,7 @@ function DropdownMenu({
     <Drawer
       placement='top'
       width={"fit-content"}
-      className='w-screen lg:hidden'
+      className='w-screen !h-fit lg:hidden'
       open={open}
       closable={false}
     >
