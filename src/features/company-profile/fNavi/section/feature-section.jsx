@@ -1,6 +1,8 @@
 import { useState } from "react";
 import SectionLayout from "../../../../components/layout/section-layout";
 import SectionTitle from "../../../../components/atoms/section-title";
+import { FaCheckCircle } from "react-icons/fa";
+import HeroTitle from "../../../../components/atoms/hero-title";
 
 export default function FeatureSection() {
 
@@ -8,8 +10,8 @@ export default function FeatureSection() {
 
   return (
     <div className="flex flex-col w-full">
-      <SectionLayout>
-        <div className="grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 gap-8 rounded-lg shadow-lg p-8 lg:rounded-none lg:shadow-none lg:p-0">
+      <SectionLayout classNames={`items-center`}>
+        <div className="grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 w-full lg:max-w-[1320px] gap-8 rounded-lg shadow-lg p-8 lg:rounded-none lg:shadow-none lg:p-0">
           <h4 className="text-[28px] text-foreground">
             We offer quality, <span className="text-textGray">with the best features and services</span>
           </h4>
@@ -18,79 +20,65 @@ export default function FeatureSection() {
           </h4>
         </div>
       </SectionLayout>
-      <SectionLayout classNames={`bg-primaryLGray items-center`}>
-        <div className="flex lg:grid lg:grid-cols-2 lg:gap-10 lg:max-w-[934px]">
-          <div className="hidden lg:flex w-full flex-col justify-between">
-            <div className="grid grid-cols-2 grid-rows-2 gap-4">
-              <div onClick={() => setActiveTab(0)} className={`flex flex-col gap-y-4 p-5 ${activeTab == 0 ? `bg-white shadow-lg` : `border-[1px] border-textGray`} rounded-full justify-center items-center w-[200px] h-[200px] hover:cursor-pointer`}>
-                <h3 className={`text-base font-semibold text-foreground`}>Cloud Removal</h3>
-                <h4 className={`text-base font-semibold text-foreground text-center underline`}>Lihat Detail</h4>
-              </div>
-              <div onClick={() => setActiveTab(1)} className={`flex flex-col gap-y-4 p-5 ${activeTab == 1 ? `bg-white shadow-lg` : `border-[1px] border-textGray`} rounded-full justify-center items-center w-[200px] h-[200px] hover:cursor-pointer`}>
-                <h3 className={`text-base font-semibold text-center text-foreground`}>Temperature Dalam Jangkauan Luas</h3>
-                <h4 className={`text-base font-semibold text-foreground text-center underline`}>Lihat Detail</h4>
-              </div>
-              <div onClick={() => setActiveTab(2)} className={`flex flex-col gap-y-4 p-5 ${activeTab == 2 ? `bg-white shadow-lg` : `border-[1px] border-textGray`} rounded-full justify-center items-center w-[200px] h-[200px] hover:cursor-pointer`}>
-                <h3 className={`text-base font-semibold text-center text-foreground`}>Arah dan Kecepatan Arus Laut</h3>
-                <h4 className={`text-base font-semibold text-foreground text-center underline`}>Lihat Detail</h4>
-              </div>
-              <div onClick={() => setActiveTab(3)} className={`flex flex-col gap-y-4 p-5 ${activeTab == 3 ? `bg-white shadow-lg` : `border-[1px] border-textGray`} rounded-full justify-center items-center w-[200px] h-[200px] hover:cursor-pointer`}>
-                <h3 className={`text-base font-semibold text-foreground text-center`}>Kepadatan Klorofil, Siome dan sea level anomaly</h3>
-                <h4 className={`text-base font-semibold text-foreground text-center underline`}>Lihat Detail</h4>
-              </div>
+      <SectionLayout classNames={`bg-sky-950 items-center !py-[60px] lg:!py-[80px] gap-y-10 lg:gap-y-[45px]`}>
+        <div className="flex w-full lg:max-w-[1320px] justify-center">
+          <SectionTitle
+            text={`How it Works`}
+            className={`!text-white drop-shadow-lg`}
+          />
+        </div>
+        <div className="flex flex-col w-full lg:max-w-[1320px] items-center">
+          <div className="flex w-full flex-col gap-y-6 lg:flex-row lg:justify-between items-center">
+            <div className="flex w-fit flex-col gap-y-4 lg:max-w-[400px] xl:max-w-[500px]">
+              <SectionTitle
+                text={`Cloud Removal`}
+                className={`!text-white drop-shadow-lg lg:!text-left`}
+              />
+              <h6 className='font-normal text-base text-white'>Teknologi pencitraan satelit terbatas karena lebih dari 60% permukaan laut terhalang awan. Oceaneyes hadir dengan teknologi AI canggih yang merekonstruksi dan melengkapi data suhu permukaan laut di area tertutup awan, menghasilkan informasi kondisi laut yang lebih presisi dan akurat.</h6>
             </div>
+            <img src="/cloud-removal.jpeg" className="w-full lg:w-[400px] rounded-lg" />
           </div>
-          <div className="hidden lg:flex w-full">
-            <div className={`${activeTab == 0 ? `opacity-100 visible translate-x-0 transition-all duration-300 flex w-[447px]` : `flex opacity-0 invisible translate-x-10 w-[447px] transition-all duration-300 absolute`} h-[500px] flex-col justify-end rounded-xl shadow-lg bg-[url('../public/feature.jpg')] bg-bottom bg-cover bg-no-repeat`}>
-              <div className="flex flex-col gap-y-5 w-full bg-black bg-opacity-10 backdrop-blur-md p-4 rounded-b-xl">
-                <h3 className="font-semibold text-white text-base">Cloud Removal</h3>
-                <h3 className="font-medium text-white text-base">Teknologi pencitraan satelit terbatas karena lebih dari 60% permukaan laut terhalang awan. Oceaneyes hadir dengan teknologi AI canggih yang merekonstruksi dan melengkapi data suhu permukaan laut di area tertutup awan, menghasilkan informasi kondisi laut yang lebih presisi dan akurat.</h3>
-              </div>
+        </div>
+      </SectionLayout>
+      <SectionLayout classNames={`bg-teal-50 items-center !py-[60px] lg:!py-[80px] gap-y-10 lg:gap-y-[45px]`}>
+        <div className="flex flex-col w-full lg:max-w-[1320px] items-center">
+          <div className="flex w-full flex-col gap-y-6 lg:flex-row lg:justify-between items-center">
+            <div className="flex w-fit flex-col gap-y-4 lg:max-w-[400px] xl:max-w-[500px]">
+              <SectionTitle
+                text={`Temperatur Dalam Jangkauan Luas`}
+                className={`!text-foreground drop-shadow-lg lg:!text-left`}
+              />
+              <h6 className='font-normal text-base text-foreground'>Platform ini menampilkan data temperatur permukaan air laut yang mencakup hampir seluruh wilayah Asia Pasifik, termasuk perairan Indonesia, dengan pembaruan setiap 4 jam dan ramalan hingga 5 hari ke depan. Informasi temperatur dapat disesuaikan hingga kedalaman 200 meter di bawah permukaan, membantu nelayan memetakan area potensial untuk memancing berdasarkan karakter ikan yang ditarget.</h6>
             </div>
-            <div className={`${activeTab == 1 ? `opacity-100 visible translate-x-0 transition-all duration-300 flex w-[447px]` : `flex opacity-0 invisible translate-x-10 w-[447px] transition-all duration-300 absolute`} h-[500px] flex-col justify-end rounded-xl shadow-lg bg-[url('../public/feature1.jpg')] bg-center bg-cover bg-no-repeat`}>
-              <div className="flex flex-col gap-y-5 w-full bg-black bg-opacity-10 backdrop-blur-md p-4 rounded-b-xl">
-                <h3 className="font-semibold text-white text-base">Temperature dalam Jangkauan Luas</h3>
-                <h3 className="font-medium text-white text-base">Oceaneyes menyediakan data temperatur permukaan laut mencakup hampir seluruh Asia Pasifik, termasuk perairan Indonesia, dengan pembaruan setiap 4 jam dan ramalan hingga 5 hari ke depan. Data ini dapat disesuaikan hingga kedalaman 200 meter, membantu nelayan memetakan area potensial memancing berdasarkan karakter ikan yang ditargetkan.</h3>
-              </div>
-            </div>
-            <div className={`${activeTab == 2 ? `opacity-100 visible translate-x-0 transition-all duration-300 flex w-[447px]` : `flex opacity-0 invisible translate-x-10 w-[447px] transition-all duration-300 absolute`} h-[500px] flex-col justify-end rounded-xl shadow-lg bg-[url('../public/feature2.jpg')] bg-center bg-cover bg-no-repeat`}>
-              <div className="flex flex-col gap-y-5 w-full bg-black bg-opacity-10 backdrop-blur-md p-4 rounded-b-xl">
-                <h3 className="font-semibold text-white text-base">Arah dan Kecepatan arus Laut</h3>
-                <h3 className="font-medium text-white text-base">Oceaneyes menyajikan data arah dan kecepatan arus laut yang mencakup seluruh Asia Pasifik, termasuk Indonesia, dengan pembaruan setiap 4 jam dan ramalan hingga 5 hari ke depan. Data ini membantu nelayan memetakan rute dan menghindari arus deras yang dapat mengganggu atau merusak proses memancing.</h3>
-              </div>
-            </div>
-            <div className={`${activeTab == 3 ? `opacity-100 visible translate-x-0 transition-all duration-300 flex w-[447px]` : `flex opacity-0 invisible translate-x-10 w-[447px] transition-all duration-300 absolute`} h-[500px] flex-col justify-end rounded-xl shadow-lg bg-[url('../public/feature3.jpg')] bg-center bg-cover bg-no-repeat`}>
-              <div className="flex flex-col gap-y-5 w-full bg-black bg-opacity-10 backdrop-blur-md p-4 rounded-b-xl">
-                <h3 className="font-semibold text-white text-base">Kepadatan Klorofil, Siome dan sea level anomaly </h3>
-                <h3 className="font-medium text-white text-base">data data lain yang anda butuhkan terkait kondisi laut akan tersedia di fnavi dan secara terus menerus akan terus ditambah menyesuaikan kebutuhan para nelayan ataupun pelaku usaha lain di sektor maritime.</h3>
-              </div>
-            </div>
+            <img src="/post-removal.jpeg" className="w-full lg:w-[400px] rounded-lg" />
           </div>
-          <div className="flex flex-col lg:hidden w-full gap-y-5">
-            <div className={`flex w-full h-[500px] flex-col justify-end rounded-xl shadow-lg bg-[url('../public/feature.jpg')] bg-bottom bg-cover bg-no-repeat`}>
-              <div className="flex flex-col gap-y-5 w-full bg-black bg-opacity-20 backdrop-blur-lg p-4 rounded-b-xl">
-                <h3 className="font-semibold text-white text-base">Cloud Removal</h3>
-                <h3 className="font-medium text-white text-base">Teknologi pencitraan satelit terbatas karena lebih dari 60% permukaan laut terhalang awan. Oceaneyes hadir dengan teknologi AI canggih yang merekonstruksi dan melengkapi data suhu permukaan laut di area tertutup awan, menghasilkan informasi kondisi laut yang lebih presisi dan akurat.</h3>
-              </div>
+        </div>
+      </SectionLayout>
+      <SectionLayout classNames={`bg-orange-50 items-center !py-[60px] lg:!py-[80px] gap-y-10 lg:gap-y-[45px]`}>
+        <div className="flex flex-col w-full lg:max-w-[1320px] items-center">
+          <div className="flex w-full flex-col gap-y-6 lg:flex-row lg:justify-between items-center">
+            <div className="flex w-fit flex-col gap-y-4 lg:max-w-[400px] xl:max-w-[500px]">
+              <SectionTitle
+                text={`Arah dan Kecepatan Arus Laut`}
+                className={`!text-foreground drop-shadow-lg lg:!text-left`}
+              />
+              <h6 className='font-normal text-base text-foreground'>Menyajikan data arah dan kecepatan arus laut yang mencakup seluruh Asia Pasifik, termasuk Indonesia, dengan pembaruan setiap 4 jam dan ramalan hingga 5 hari ke depan. Informasi ini membantu nelayan memetakan rute yang aman dan menghindari arus deras yang berpotensi mengganggu atau merusak proses memancing.</h6>
             </div>
-            <div className={`flex w-full h-[500px] flex-col justify-end rounded-xl shadow-lg bg-[url('../public/feature1.jpg')] bg-bottom bg-cover bg-no-repeat`}>
-              <div className="flex flex-col gap-y-5 w-full bg-black bg-opacity-20 backdrop-blur-lg p-4 rounded-b-xl">
-                <h3 className="font-semibold text-white text-base">Temperature dalam Jangkauan Luas</h3>
-                <h3 className="font-medium text-white text-base">Oceaneyes menyediakan data temperatur permukaan laut mencakup hampir seluruh Asia Pasifik, termasuk perairan Indonesia, dengan pembaruan setiap 4 jam dan ramalan hingga 5 hari ke depan. Data ini dapat disesuaikan hingga kedalaman 200 meter, membantu nelayan memetakan area potensial memancing berdasarkan karakter ikan yang ditargetkan.</h3>
-              </div>
+            <img src="/kecepatan-angin.jpeg" className="w-full lg:w-[400px] rounded-lg" />
+          </div>
+        </div>
+      </SectionLayout>
+      <SectionLayout classNames={`bg-cyan-950 items-center !py-[60px] lg:!py-[80px] gap-y-10 lg:gap-y-[45px]`}>
+        <div className="flex flex-col w-full lg:max-w-[1320px] items-center">
+          <div className="flex w-full flex-col gap-y-6 lg:flex-row lg:justify-between items-center">
+            <div className="flex w-fit flex-col gap-y-4 lg:max-w-[400px] xl:max-w-[500px]">
+              <SectionTitle
+                text={`Arah dan Kecepatan Arus Laut`}
+                className={`!text-white drop-shadow-lg lg:!text-left`}
+              />
+              <h6 className='text-white font-normal text-base text-foreground'>Menyajikan data arah dan kecepatan arus laut yang mencakup seluruh Asia Pasifik, termasuk Indonesia, dengan pembaruan setiap 4 jam dan ramalan hingga 5 hari ke depan. Informasi ini membantu nelayan memetakan rute yang aman dan menghindari arus deras yang berpotensi mengganggu atau merusak proses memancing.</h6>
             </div>
-            <div className={`flex w-full h-[500px] flex-col justify-end rounded-xl shadow-lg bg-[url('../public/feature2.jpg')] bg-bottom bg-cover bg-no-repeat`}>
-              <div className="flex flex-col gap-y-5 w-full bg-black bg-opacity-20 backdrop-blur-lg p-4 rounded-b-xl">
-                <h3 className="font-semibold text-white text-base">Arah dan Kecepatan arus Laut</h3>
-                <h3 className="font-medium text-white text-base">Oceaneyes menyajikan data arah dan kecepatan arus laut yang mencakup seluruh Asia Pasifik, termasuk Indonesia, dengan pembaruan setiap 4 jam dan ramalan hingga 5 hari ke depan. Data ini membantu nelayan memetakan rute dan menghindari arus deras yang dapat mengganggu atau merusak proses memancing.</h3>
-              </div>
-            </div>
-            <div className={`flex w-full h-[500px] flex-col justify-end rounded-xl shadow-lg bg-[url('../public/feature3.jpg')] bg-bottom bg-cover bg-no-repeat`}>
-              <div className="flex flex-col gap-y-5 w-full bg-black bg-opacity-20 backdrop-blur-lg p-4 rounded-b-xl">
-                <h3 className="font-semibold text-white text-base">Kepadatan Klorofil, Siome dan sea level anomaly </h3>
-                <h3 className="font-medium text-white text-base">data data lain yang anda butuhkan terkait kondisi laut akan tersedia di fnavi dan secara terus menerus akan terus ditambah menyesuaikan kebutuhan para nelayan ataupun pelaku usaha lain di sektor maritime.</h3>
-              </div>
-            </div>
+            <img src="/persebaran-klorofil.jpeg" className="w-full lg:w-[400px] rounded-lg" />
           </div>
         </div>
       </SectionLayout>

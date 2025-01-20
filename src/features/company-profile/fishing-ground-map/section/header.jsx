@@ -27,7 +27,7 @@ function FishingGroundMapHeader() {
               <h4 className='text-primary text-base'>Learn More</h4>
             </button>
             <button className='flex justify-center items-center rounded-full bg-primary px-4 py-2 w-[180px] shadow-lg'>
-              <h4 className='text-white text-base'>Get Free Trial</h4>
+              <h4 className='text-white text-base'>Get Started</h4>
             </button>
           </div>
         </div>
