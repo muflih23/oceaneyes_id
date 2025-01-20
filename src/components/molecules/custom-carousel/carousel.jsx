@@ -50,7 +50,7 @@ const CustomCarousel = ({
   return (
     <div className="relative w-full max-w-4xl xl:max-w-full mx-auto xl:mx-0">
       {/* Slide Container */}
-      <div className="overflow-hidden w-full relative h-[550px] md:h-[300px]"
+      <div className="overflow-hidden w-full relative h-[550px] md:h-[300px] lg:h-fit"
         style={{
           margin: 0,
           padding: 0,
