@@ -97,7 +97,7 @@ export default function PSProductSection() {
             </div>
           </div>
           <div className="flex w-full justify-center items-center lg:justify-start lg:items-start">
-            <div className={`${activeTab == 0 ? `opacity-100 visible translate-x-0 transition-all duration-300 flex w-[447px]` : `opacity-0 invisible translate-x-10 w-[447px] transition-all duration-300 absolute`} h-[500px] flex-col rounded-xl shadow-lg bg-[url('../public/product1.jpg')] bg-center bg-cover bg-no-repeat`}>
+            <div className={`${activeTab == 0 ? `opacity-100 visible translate-x-0 transition-all duration-300 flex w-full md:w-[447px]` : `opacity-0 invisible translate-x-10 w-full md:w-[447px] transition-all duration-300 absolute`} h-[500px] flex-col rounded-xl shadow-lg bg-[url('../public/product1.jpg')] bg-center bg-cover bg-no-repeat`}>
               <div className="flex w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-xl p-5 gap-y-8 h-[500px] justify-between">
                 <div className="flex flex-col gap-y-5 w-full">
                   <h2 className="font-bold text-white text-[25px] text-left">FNavi</h2>
@@ -112,7 +112,7 @@ export default function PSProductSection() {
                 </button>
               </div>
             </div>
-            <div className={`${activeTab == 1 ? `opacity-100 visible translate-x-0 transition-all duration-300 flex w-[447px]` : `opacity-0 invisible translate-x-10 w-[447px] transition-all duration-300 absolute`} h-[500px] flex-col rounded-xl shadow-lg bg-[url('../public/product2.jpg')] bg-center bg-cover bg-no-repeat`}>
+            <div className={`${activeTab == 1 ? `opacity-100 visible translate-x-0 transition-all duration-300 flex w-full md:w-[447px]` : `opacity-0 invisible translate-x-10 w-full md:w-[447px] transition-all duration-300 absolute`} h-[500px] flex-col rounded-xl shadow-lg bg-[url('../public/product2.jpg')] bg-center bg-cover bg-no-repeat`}>
               <div className="flex w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-xl p-5 gap-y-8 h-[500px] justify-between">
                 <div className="flex flex-col gap-y-5 w-full">
                   <h2 className="font-bold text-white text-[25px] text-left">Fishing Ground Map</h2>

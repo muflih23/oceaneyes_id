@@ -1,14 +1,22 @@
 import React, { useRef } from 'react'
 import HeroTitle from '../../../../components/atoms/hero-title'
 import SectionTitle from '../../../../components/atoms/section-title'
-import { Input } from 'antd';
+import { Input, Modal, Spin } from 'antd';
 import useContactForm from '../hook/useContactForm';
+import { LoadingOutlined } from '@ant-design/icons';
+import { FaCheckCircle } from "react-icons/fa";
+import { BiSolidErrorCircle } from "react-icons/bi";
 
 function ContactHeroSection() {
 
   const {
     handleInputChange,
     formSubmit,
+    successModal,
+    setSuccessModal,
+    errorModal,
+    setErrorModal,
+    isSending,
   } = useContactForm()
 
   const { TextArea } = Input;
@@ -106,15 +114,54 @@ function ContactHeroSection() {
             </div>
             <div className="w-full pt-10">
               <button
-                onClick={() => formSubmit}
-                className="bg-secondary rounded-2xl py-2 flex justify-center items-center w-[141px] text-white font-bold text-sm"
+                onClick={() => formSubmit()}
+                disabled={isSending}
+                className="bg-secondary rounded-2xl py-2 flex justify-center items-center w-[141px] text-white font-bold text-sm disabled:bg-gray-400"
               >
-                Kirim
+                {
+                  isSending ? (
+                    <Spin indicator={<LoadingOutlined spin className='text-white' size="md"/>}/>
+                  ) : (
+                    <p>Kirim</p>
+                  )
+                }
               </button>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      <Modal 
+        title={null}
+        centered
+        open={successModal}
+        footer={null}
+        onCancel={() => setSuccessModal(false)}
+      >
+        <div className='flex w-full flex-col items-center justify-center gap-y-6 font-hero'>
+          <FaCheckCircle color='green' className='text-green-500' size={60}/>
+          <div className='flex flex-col gap-y-4 justify-center items-center w-full'>
+            <span className='font-hero font-bold text-2xl'>Success</span>
+            <span className='font-hero font-normal text-base text-gray-400'>Terima kasih atas pesan anda, kami akan segera merespon</span>
+          </div>
+        </div>
+      </Modal>
+      <Modal 
+        title={null}
+        centered
+        open={errorModal}
+        footer={null}
+        onCancel={() => setErrorModal(false)}
+      >
+        <div className='flex w-full flex-col items-center justify-center gap-y-6 font-hero'>
+          <BiSolidErrorCircle color='orange' className='text-green-500' size={60}/>
+          <div className='flex flex-col gap-y-4 justify-center items-center w-full'>
+            <span className='font-hero font-bold text-2xl'>Gagal</span>
+            <span className='font-hero font-normal text-base text-gray-400 text-center'>Maaf, terjadi kesalahan saat mengirim pesan. Silahkan mencoba kembali beberapa saat lagi</span>
+          </div>
+        </div>
+      </Modal>
     </div>
   )
 }

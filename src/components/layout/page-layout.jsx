@@ -34,7 +34,7 @@ useEffect(() => {
 
 
     return (
-        <div className='block lg:box-border min-h-screen overflow-y-scroll relative landing-page'>
+        <div className='block box-border min-h-screen overflow-y-scroll relative landing-page overflow-x-hidden'>
             <Navbar 
                 invisible={invisible}
                 scrollToAbout={scrollToAbout}

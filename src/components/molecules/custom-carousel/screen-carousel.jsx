@@ -88,7 +88,7 @@ const ScreenCarousel = ({
       </div>
 
       {/* Dot Indicators */}
-      <div className="absolute z-20 left-20 bottom-20 flex justify-center mt-4 space-x-4">
+      <div className="absolute z-20 left-[16px] md:left-[45px] xl:left-[67px] bottom-5 flex justify-center mt-4 space-x-4">
         {items.map((item, index) => (
           <button
             key={index}

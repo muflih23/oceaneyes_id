@@ -73,10 +73,10 @@ export default function FeatureSection() {
           <div className="flex w-full flex-col gap-y-6 lg:flex-row lg:justify-between items-center">
             <div className="flex w-fit flex-col gap-y-4 lg:max-w-[400px] xl:max-w-[500px]">
               <SectionTitle
-                text={`Arah dan Kecepatan Arus Laut`}
+                text={`Konfigurasi Lain Sesuai Kebutuhan`}
                 className={`!text-white drop-shadow-lg lg:!text-left`}
               />
-              <h6 className='text-white font-normal text-base text-foreground'>Menyajikan data arah dan kecepatan arus laut yang mencakup seluruh Asia Pasifik, termasuk Indonesia, dengan pembaruan setiap 4 jam dan ramalan hingga 5 hari ke depan. Informasi ini membantu nelayan memetakan rute yang aman dan menghindari arus deras yang berpotensi mengganggu atau merusak proses memancing.</h6>
+              <h6 className='text-white font-normal text-base text-foreground'>Data data lain yang anda butuhkan terkait kondisi laut akan tersedia di fnavi dan secara terus menerus akan terus ditambah menyesuaikan kebutuhan para nelayan ataupun pelaku usaha lain di sektor maritime..</h6>
             </div>
             <img src="/persebaran-klorofil.jpeg" className="w-full lg:w-[400px] rounded-lg" />
           </div>

@@ -13,11 +13,11 @@ const ServiceSection = lazy(() => import('./section/service-section'));
 export default function Homepage() {
 
     useEffect(() => {
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     })
 
     return (
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col w-screen overflow-x-hidden'>
             <HeroSection />
             <GoalSection />
             <PSProductSection />
