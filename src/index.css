@@ -94,7 +94,7 @@ button img .no-shadow {
   color: #ffffff !important;
 }
 
-:where(.css-dev-only-do-not-override-142vneq).ant-dropdown {
+.ant-dropdown {
   z-index: 8000 !important;
 }
 
