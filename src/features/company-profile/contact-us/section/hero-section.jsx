@@ -23,7 +23,7 @@ function ContactHeroSection() {
 
   return (
     <div
-      className="w-full lg:min-h-[100vh] flex justify-center items-center bg-[url('../public/card-placeholder.jpg')] bg-center lg:bg-center bg-cover bg-no-repeat"
+      className="w-full lg:min-h-[100vh] flex justify-center pt-[90px] bg-[url('../public/card-placeholder.jpg')] bg-center lg:bg-center bg-cover bg-no-repeat"
     >
       <div className='w-full h-full flex flex-col lg:flex-row lg:justify-between items-center px-[22px] md:px-[45px] xl:px-[67px] gap-y-[66px] md:gap-y-[40px] lg:gap-y-[71px]'>
         <div className='flex flex-col h-full md:w-full lg:w-fit justify-between gap-y-10 mt-[90px] lg:mt-0'>

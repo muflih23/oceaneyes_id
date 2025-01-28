@@ -43,7 +43,7 @@ function HeroSection() {
     {
       element: (
         <div
-          className="w-full h-screen lg:h-[90vh] flex justify-center items-center bg-[url('https://storage.oceaneyes.id/oceaneyes/home/DSC06900.jpg')] bg-center lg:bg-center bg-cover bg-no-repeat"
+          className="w-full h-screen lg:h-[90vh] flex justify-center items-center bg-[url('https://storage.oceaneyes.id/oceaneyes/web/home_header.webp')] bg-center lg:bg-center bg-cover bg-no-repeat"
         >
           <div className='w-full h-full flex flex-col justify-center md:justify-end bg-black bg-opacity-30 px-[22px] md:px-[45px] xl:px-[67px] gap-y-[66px] md:gap-y-[40px] lg:gap-y-[71px] py-[60px]'>
             <div className='flex max-w-[1120px]'>

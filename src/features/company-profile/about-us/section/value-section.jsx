@@ -6,7 +6,7 @@ import { FaUniversity } from "react-icons/fa";
 
 export default function ValueSection() {
   return (
-    <SectionLayout classNames={`bg-[url('https://storage.oceaneyes.id/oceaneyes/product-service/1736600411974.jpg')] bg-cover bg-center mt-[90px] !p-0`}>
+    <SectionLayout classNames={`bg-[url('https://storage.oceaneyes.id/oceaneyes/web/service_header.webp')] bg-cover bg-center mt-[90px] !p-0`}>
       <SectionLayout classNames="!py-20 lg:!py-[90px] bg-black bg-opacity-40">
         <div className="flex flex-col justify-center items-center py-4 lg:py-10 gap-y-2">
           <h2 className="font-semibold text-white text-[25px] xl:text-[40px] text-center">We are</h2>

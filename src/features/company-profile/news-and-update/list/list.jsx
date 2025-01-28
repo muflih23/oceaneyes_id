@@ -20,17 +20,19 @@ function List() {
     <div className='flex flex-col w-full'>
       {!searchParams.get('keyword') && (
         <SectionLayout classNames={`!pt-[86px] pb-0`}>
-          <div className="flex items-center justify-between w-full h-[calc(100vh-86px)] lg:h-[70vh] rounded-3xl p-4 lg:p-10 bg-[url('../public/fnavi.jpg')] bg-cover bg-no-repeat relative">
-            <div className="flex w-fit flex-col gap-y-2">
-              <HeroTitle
-                className={`!flex !text-white drop-shadow-lg`}
-                text={"Our Activities"}
-              />
-              <div className='flex justify-center items-center w-full lg:w-[600px]'>
-                <SearchInput
-                  onChange={() => { }}
-                  onSearch={() => { }}
+          <div className="flex items-center justify-between w-full h-[calc(100vh-86px)] lg:h-[70vh] rounded-3xl bg-[url('https://storage.oceaneyes.id/oceaneyes/web/news_header.webp')] bg-cover bg-no-repeat relative">
+            <div className='p-4 lg:p-10 bg-black bg-opacity-30 w-full h-full flex items-center'>
+              <div className="flex w-fit flex-col gap-y-2">
+                <HeroTitle
+                  className={`!flex !text-white drop-shadow-lg`}
+                  text={"Our Activities"}
                 />
+                <div className='flex justify-center items-center w-full lg:w-[600px]'>
+                  <SearchInput
+                    onChange={() => { }}
+                    onSearch={() => { }}
+                  />
+                </div>
               </div>
             </div>
           </div>
