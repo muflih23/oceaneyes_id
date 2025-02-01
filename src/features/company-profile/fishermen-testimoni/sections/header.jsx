@@ -23,14 +23,14 @@ function TestimoniHeader() {
   ))
 
   return (
-    <div className='flex flex-col w-screen lg:min-h-[90vh] bg-[url("../public/testimonials.jpg")] bg-center bg-cover justify-center items-center'>
-      <SectionLayout classNames={`!justify-center !items-center gap-y-8 lg:!gap-y-10 !pt-[86px]`}>
+    <div className='flex flex-col w-screen lg:min-h-[90vh] bg-[url("https://storage.oceaneyes.id/oceaneyes/web/2024.jpeg")] bg-center bg-cover justify-center items-center'>
+      <SectionLayout classNames={`!justify-center !items-center gap-y-8 lg:!gap-y-10 !pt-[86px] bg-black bg-opacity-30 min-h-[90vh]`}>
         <div className='flex flex-col w-full justify-center items-center gap-y-4 lg:max-w-[1320px]'>
           <HeroTitle
-            text={`Hear From Our Satisfied Fishermen Have to Say`}
+            text={`Fishermen Testimoni`}
             className={`text-center !text-white !drop-shadow-lg`}
           />
-          <h3 className='font-hero text-lg text-white font-semibold !text-center !drop-shadow-lg'>Lihat apa yang dikatakan nelayan tentang pengalaman mereka dengan produk dan layanan kami</h3>
+          <h3 className='font-hero text-lg text-white font-semibold !text-center !drop-shadow-lg'>Apa yang dikatakan nelayan tentang pengalaman mereka dengan produk dan layanan kami</h3>
         </div>
         <div className='w-full mt-[80px]'>
           <CustomCarousel

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import FishingGroundMapHeader from './section/header'
 import FishingGroundMapFeatures from './section/features'
 import FishingGroundMapDisplay from './section/display'
@@ -11,13 +11,29 @@ function FishingGroundMap() {
     window.scrollTo(0, 0)
   }, [])
 
+  const featureRef = useRef(null);
+  const ctaRef = useRef(null);
+
+  const scrollToFeature = () => {
+    featureRef?.current?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  const scrollToCTA = () => {
+    ctaRef?.current?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <div className='flex flex-col w-full'>
-      <FishingGroundMapHeader />
-      <FishingGroundMapFeatures />
+      <FishingGroundMapHeader
+        scrollToFeature={() => scrollToFeature()}
+        scrollToCTA={() => scrollToCTA()}
+      />
+      <FishingGroundMapFeatures ref={featureRef} />
       <FishingGroundMapDisplay />
       <FishingGroundMapStep />
-      <CTASection />
+      <div ref={ctaRef} className='flex w-full'>
+        <CTASection />
+      </div>
     </div>
   )
 }

@@ -14,12 +14,12 @@ function FishingGroundMapDisplay() {
           />
           <div className='flex w-full lg:hidden justify-center'>
             <div className='flex w-full md:w-[200px] lg:hidden rounded-lg'>
-              <img src='/product2.jpg' className='rounded-lg lg:hidden' />
+              <img src='https://storage.oceaneyes.id/oceaneyes/web/fishing-ground.webp' className='rounded-lg lg:hidden' />
             </div>
           </div>
           <div className='hidden lg:flex w-[400px] xl:w-[600px] bg-sky-100 rounded-lg p-8 justify-center items-center'>
             <div className='flex w-full rounded-lg w-[350px]'>
-              <img src='/product2.jpg' className='rounded-lg' />
+              <img src='https://storage.oceaneyes.id/oceaneyes/web/fishing-ground.webp' className='rounded-lg' />
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@ function FishingGroundMapDisplay() {
                 <FaCheckCircle size={20} className='text-secondary' />
                 <h6 className='font-bold text-lg'>Utilisasi dari Fishing Ground Map :</h6>
               </div>
-              <h7 className='text-gray-500'>- Penentuan okasi dan waktu sehingga tidak menhabiskan cost dan waktu mencari area yang potensial</h7>
+              <h7 className='text-gray-500'>- Penentuan lokasi dan waktu sehingga tidak menhabiskan cost dan waktu mencari area yang potensial</h7>
               <h7 className='text-gray-500'>- Pembuatan rute sehingga proses penangkapan ikan akan semakin efisien </h7>
             </div>
           </div>

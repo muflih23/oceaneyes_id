@@ -19,16 +19,17 @@ function List() {
   return (
     <div className='flex flex-col w-full'>
       {!searchParams.get('keyword') && (
-        <SectionLayout classNames={`!pt-[86px] pb-0`}>
-          <div className="flex items-center justify-between w-full h-[calc(100vh-86px)] lg:h-[70vh] rounded-3xl bg-[url('https://storage.oceaneyes.id/oceaneyes/web/news_header.webp')] bg-cover bg-no-repeat relative">
-            <div className='p-4 lg:p-10 bg-black bg-opacity-30 w-full h-full flex items-center'>
-              <div className="flex w-fit flex-col gap-y-2">
+        <SectionLayout classNames={`!p-0 bg-[url('https://storage.oceaneyes.id/oceaneyes/web/news_header.webp')] bg-cover bg-center bg-no-repeat`}>
+          <div className="flex pt-[86px] bg-black bg-opacity-50 items-center justify-between w-full h-[calc(100vh-86px)] lg:min-h-[90vh] relative">
+            <div className='p-4 lg:p-10 w-full h-full flex items-center'>
+              <div className="flex flex-col gap-y-2">
                 <HeroTitle
                   className={`!flex !text-white drop-shadow-lg`}
                   text={"Our Activities"}
                 />
-                <div className='flex justify-center items-center w-full lg:w-[600px]'>
+                <div className='flex justify-center items-center w-full w-[300px] lg:w-[600px]'>
                   <SearchInput
+                    className={`!w-[300px] lg:!w-[600px]`}
                     onChange={() => { }}
                     onSearch={() => { }}
                   />

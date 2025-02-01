@@ -16,16 +16,16 @@ export default function UpdateSection() {
                 />
             </div>
             <div className="flex flex-col md:flex-row justify-center items-center pt-4 lg:pt-10 gap-y-4 md:gap-x-4 xl:gap-x-8">
-                <img src="/card-placeholder.jpg" className="rounded-xl shadow-lg w-[327px] md:w-[200px] xl:w-[327px]"/>
-                <img src="/card-placeholder.jpg" className="rounded-xl shadow-lg w-[327px] md:w-[200px] xl:w-[327px]"/>
-                <img src="/card-placeholder.jpg" className="rounded-xl shadow-lg w-[327px] md:w-[200px] xl:w-[327px]"/>
+                <img src="https://storage.oceaneyes.id/oceaneyes/web/update1.webp" className="rounded-xl shadow-lg w-[327px] md:w-[200px] xl:w-[327px] h-[327px] md:h-[200px] xl:h-[327px]"/>
+                <img src="https://storage.oceaneyes.id/oceaneyes/web/update2-cmp.webp" className="rounded-xl shadow-lg w-[327px] md:w-[200px] xl:w-[327px] h-[327px] md:h-[200px] xl:h-[327px]"/>
+                <img src="https://storage.oceaneyes.id/oceaneyes/web/update3-cmp.webp" className="rounded-xl shadow-lg w-[327px] md:w-[200px] xl:w-[327px] h-[327px] md:h-[200px] xl:h-[327px]"/>
             </div>
             <div className="flex flex-col gap-y-6 w-full justify-center items-center pt-6 lg:pt-10">
                 <h5 className="font-bold text-foreground text-base lg:text-lg text-center">Jangan lewatkan setiap kegiatan dan inovasi terbaru kami</h5>
                 <PrimaryButton 
                     text={`See More`}
                     className={`!text-base !px-8`}
-                    onClick={() => {}}
+                    onClick={() => navigate('/news')}
                 />
             </div>
         </div>

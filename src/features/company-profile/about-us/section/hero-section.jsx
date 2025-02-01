@@ -19,6 +19,12 @@ function AboutHeroSection() {
             </>}
           />
         </div>
+        <button
+          onClick={() => navigate('/product-and-services')}
+          className='w-fit flex justify-center items-center py-2 px-4 rounded-[50px] text-white font-bold bg-secondary text-sm'
+        >
+          Our Products
+        </button>
       </div>
     </div>
   )

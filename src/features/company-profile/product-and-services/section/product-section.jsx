@@ -97,8 +97,8 @@ export default function PSProductSection() {
             </div>
           </div>
           <div className="flex w-full justify-center items-center lg:justify-start lg:items-start">
-            <div className={`${activeTab == 0 ? `opacity-100 visible translate-x-0 transition-all duration-300 flex w-full md:w-[447px]` : `opacity-0 invisible translate-x-10 w-full md:w-[447px] transition-all duration-300 absolute`} h-[500px] flex-col rounded-xl shadow-lg bg-[url('../public/product1.jpg')] bg-center bg-cover bg-no-repeat`}>
-              <div className="flex w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-xl p-5 gap-y-8 h-[500px] justify-between">
+            <div className={`${activeTab == 0 ? `opacity-100 visible translate-x-0 transition-all duration-300 flex w-full md:w-[447px]` : `opacity-0 invisible translate-x-10 w-full md:w-[447px] transition-all duration-300 absolute`} h-[500px] flex-col rounded-xl shadow-lg bg-[url('https://storage.oceaneyes.id/oceaneyes/web/pre-removal.webp')] bg-center bg-cover bg-no-repeat`}>
+              <div className="flex w-full flex-col bg-black bg-opacity-50 backdrop-blur-sm rounded-xl p-5 gap-y-8 h-[500px] justify-between">
                 <div className="flex flex-col gap-y-5 w-full">
                   <h2 className="font-bold text-white text-[25px] text-left">FNavi</h2>
                   <h3 className="font-semibold text-white text-base">Fnavi, We See The Future of Ocean </h3>
@@ -112,14 +112,15 @@ export default function PSProductSection() {
                 </button>
               </div>
             </div>
-            <div className={`${activeTab == 1 ? `opacity-100 visible translate-x-0 transition-all duration-300 flex w-full md:w-[447px]` : `opacity-0 invisible translate-x-10 w-full md:w-[447px] transition-all duration-300 absolute`} h-[500px] flex-col rounded-xl shadow-lg bg-[url('../public/product2.jpg')] bg-center bg-cover bg-no-repeat`}>
-              <div className="flex w-full flex-col bg-[rgba(0,0,0,0.5)] rounded-xl p-5 gap-y-8 h-[500px] justify-between">
+            <div className={`${activeTab == 1 ? `opacity-100 visible translate-x-0 transition-all duration-300 flex w-full md:w-[447px]` : `opacity-0 invisible translate-x-10 w-full md:w-[447px] transition-all duration-300 absolute`} h-[500px] flex-col rounded-xl shadow-lg bg-[url('https://storage.oceaneyes.id/oceaneyes/web/fishing-ground.webp')] bg-center bg-cover bg-no-repeat`}>
+              <div className="flex w-full flex-col bg-black bg-opacity-50 backdrop-blur-sm rounded-xl p-5 gap-y-8 h-[500px] justify-between">
                 <div className="flex flex-col gap-y-5 w-full">
                   <h2 className="font-bold text-white text-[25px] text-left">Fishing Ground Map</h2>
                   <h3 className="font-semibold text-white text-base">We Bring your Fishing Process to be more Efficient and Safe</h3>
                   <h3 className="font-medium text-white text-base">Fishing Ground Map adalah peta berbasis teknologi canggih yang dirancang untuk membantu nelayan dan pelaku industri perikanan mengidentifikasi lokasi dan waktu terbaik untuk menangkap jenis ikan tertentu. Peta ini dibuat melalui analisis mendalam terhadap data kondisi laut, perilaku alami ikan, dan data historis penangkapan yang diproses dengan teknologi AI OceanEyes.</h3>
                 </div>
                 <button
+                  onClick={() => navigate('/fishing-ground-map')}
                   className="bg-secondary rounded-2xl py-2 flex justify-center items-center w-[141px] text-white font-bold text-sm"
                 >
                   Lihat Detail
