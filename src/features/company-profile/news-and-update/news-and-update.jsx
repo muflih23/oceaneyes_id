@@ -13,7 +13,7 @@ function NewsAndUpdate() {
   }, [])
   
   if(id) {
-    return <Detail />
+    return <Detail/>
   } else {
     return <List />
   }

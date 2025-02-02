@@ -99,13 +99,13 @@ function Navbar({
           <NavLinks
             action={() => navigate('/about')}
             text={"About Us"}
-            invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
+            invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname) && !location.search}
             active={location.pathname === '/about'}
           />
           <NavLinks
             action={() => navigate('/news')}
             text={"Our Activity"}
-            invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
+            invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname) && !location.search}
             active={location.pathname === '/news'}
           />
           {/* <NavLinks
@@ -113,12 +113,12 @@ function Navbar({
             text={"Product And Services"}
             invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
           /> */}
-          <Dropdown menu={{ items: serviceMenu }} className={`${invisible && !UNIQUE_ROUTES.includes(location.pathname) ? `text-white` : `text-foreground`} font-semibold text-[14px]`}>
+          <Dropdown menu={{ items: serviceMenu }} className={`${invisible && !UNIQUE_ROUTES.includes(location.pathname) && !location.search ? `text-white` : `text-foreground`} font-semibold text-[14px]`}>
             <a className='flex w-fit focus:bg-transparent' onClick={(e) => e.preventDefault()}>
               <NavLinks
                 action={() => { }}
                 text={'Product And Services'}
-                invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
+                invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname) && !location.search}
                 active={location.pathname === '/product-and-services' || location.pathname === '/fnavi' || location.pathname === '/fishing-ground-map'}
               />
             </a>
@@ -126,13 +126,13 @@ function Navbar({
           <NavLinks
             action={() => navigate('/contact-us')}
             text={"Contact Us"}
-            invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
+            invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname) && !location.search}
             active={location.pathname === '/contact-us'}
           />
           <NavLinks
             action={() => navigate('/fishermen-testimoni')}
             text={"Fishermen Testimoni"}
-            invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname)}
+            invisible={invisible && !UNIQUE_ROUTES.includes(location.pathname) && !location.search}
             active={location.pathname === '/fishermen-testimoni'}
           />
         </div>

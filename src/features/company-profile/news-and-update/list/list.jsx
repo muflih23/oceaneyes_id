@@ -13,6 +13,10 @@ function List() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate()
 
+  const handleNavigateToDetail = (id) => {
+    navigate(`/news?id=${id}`)
+  }
+
   const {
     paginationFilter,
     onPageChange,
@@ -66,7 +70,7 @@ function List() {
             <div className='grid w-full lg:w-[960px] grid-cols-1 lg:grid-cols-3 gap-4'>
               {
                 searchResultData.map((result, index) => (
-                  <div className='flex flex-col w-full gap-y-2'>
+                  <div onClick={() => handleNavigateToDetail(result._id)} className='flex flex-col w-full gap-y-2 hover:cursor-pointer'>
                     <img
                       src={result.imageUrl}
                       className='w-full'
@@ -99,7 +103,7 @@ function List() {
                 />
               </div>
               <div className='grid w-full lg:w-[960px] grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 gap-4'>
-                <div className='lg:row-span-3 flex flex-col w-full gap-y-2'>
+                <div onClick={() => handleNavigateToDetail(spotlightData[0]._id)} className='lg:row-span-3 flex flex-col w-full gap-y-2 hover:cursor-pointer'>
                   <img
                     src={spotlightData[0].imageUrl}
                     className='w-full'
@@ -111,7 +115,7 @@ function List() {
                   />
                   <h4 className='text-gray-400 text-base font-normal'>{spotlightData[0].shortDesc}</h4>
                 </div>
-                <div className='lg:col-start-2 flex w-full gap-x-2'>
+                <div onClick={() => handleNavigateToDetail(listData[0]._id)} className='lg:col-start-2 flex w-full gap-x-2 hover:cursor-pointer'>
                   <img
                     src={listData[0].imageUrl}
                     className='w-1/2'
@@ -126,7 +130,7 @@ function List() {
                 </div>
                 {
                   listData.length > 1 && (
-                    <div className='flex w-full gap-x-2'>
+                    <div onClick={() => handleNavigateToDetail(listData[1]._id)} className='flex w-full gap-x-2 hover:cursor-pointer'>
                       <img
                         src={listData[1].imageUrl}
                         className='w-1/2'
@@ -143,7 +147,7 @@ function List() {
                 }
                 {
                   listData.length > 2 && (
-                    <div className='flex w-full gap-x-2'>
+                    <div onClick={() => handleNavigateToDetail(listData[2]._id)} className='flex w-full gap-x-2 hover:cursor-pointer'>
                       <img
                         src={listData[2].imageUrl}
                         className='w-1/2'
@@ -172,7 +176,7 @@ function List() {
           <div className='grid w-full lg:w-[960px] grid-cols-1 lg:grid-cols-3 gap-4'>
             {
               listData.map((article, index) => (
-                <div className='flex flex-col w-full gap-y-2'>
+                <div onClick={() => handleNavigateToDetail(article._id)} className='flex flex-col w-full gap-y-2 hover:cursor-pointer'>
                   <img
                     src={article.imageUrl}
                     className='w-full'
