@@ -3,17 +3,28 @@ import SectionLayout from '../../../../components/layout/section-layout'
 import SectionTitle from '../../../../components/atoms/section-title'
 import { Input, Pagination } from 'antd'
 import SearchInput from '../../../../components/atoms/input/input'
-import { useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import useNewsData from '../hook/useNewsData'
 import HeroTitle from '../../../../components/atoms/hero-title'
+import { formatDate } from '../../../../utils/dateFormat'
 
 function List() {
 
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate()
 
   const {
     paginationFilter,
     onPageChange,
+    spotlightData,
+    listData,
+    setKeyword,
+    keyword,
+    searchResultFilter,
+    setSearchResultFilter,
+    searchResultPagination,
+    onSearchResultPageChange,
+    searchResultData,
   } = useNewsData()
 
   return (
@@ -30,8 +41,12 @@ function List() {
                 <div className='flex justify-center items-center w-full w-[300px] lg:w-[600px]'>
                   <SearchInput
                     className={`!w-[300px] lg:!w-[600px]`}
-                    onChange={() => { }}
-                    onSearch={() => { }}
+                    onChange={(e) => setKeyword(e.target.value)}
+                    onSearch={() => setSearchResultFilter({
+                      ...searchResultFilter,
+                      page: 1,
+                      search: keyword,
+                    })}
                   />
                 </div>
               </div>
@@ -40,170 +55,113 @@ function List() {
         </SectionLayout>
       )}
       <SectionLayout classNames={`${searchParams.get('keyword') ? `!pt-[86px]` : ``} pb-10 w-full min-h-[70vh] items-center`}>
-        {searchParams.get('keyword') && (
-          <div className='flex justify-center items-center w-full lg:w-[960px]'>
-            <SearchInput
-              onChange={() => { }}
-              onSearch={() => { }}
-            />
-          </div>
-        )}
-        {searchParams.get('keyword') && (
+        {searchResultFilter.search.length > 0 && (
           <div className='flex w-full flex-col gap-y-8 justify-center items-center mt-10 lg:mt-[60px]'>
             <div className='flex w-full lg:w-[960px]'>
               <SectionTitle
-                text={"Search Result"}
+                text={`Search Result for "${searchResultFilter.search}"`}
                 classNames={"!text-left"}
               />
             </div>
-            <div className='grid w-full lg:w-[960px] grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-4'>
-              <div className='flex flex-col w-full gap-y-2'>
-                <img
-                  src='/card-placeholder.jpg'
-                  className='w-full'
-                />
-                <div className='flex flex-col gap-y-2 w-fit'>
-                  <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                  <SectionTitle
-                    className={`!text-left !font-semibold !text-lg`}
-                    text={"Lorem ipsum dolor sit amet"}
-                  />
-                </div>
-              </div>
-              <div className='flex flex-col w-full gap-y-2'>
-                <img
-                  src='/card-placeholder.jpg'
-                  className='w-full'
-                />
-                <div className='flex flex-col gap-y-2 w-fit'>
-                  <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                  <SectionTitle
-                    className={`!text-left !font-semibold !text-lg`}
-                    text={"Lorem ipsum dolor sit amet"}
-                  />
-                </div>
-              </div>
-              <div className='flex flex-col w-full gap-y-2'>
-                <img
-                  src='/card-placeholder.jpg'
-                  className='w-full'
-                />
-                <div className='flex flex-col gap-y-2 w-fit'>
-                  <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                  <SectionTitle
-                    className={`!text-left !font-semibold !text-lg`}
-                    text={"Lorem ipsum dolor sit amet"}
-                  />
-                </div>
-              </div>
-              <div className='flex flex-col w-full gap-y-2'>
-                <img
-                  src='/card-placeholder.jpg'
-                  className='w-full'
-                />
-                <div className='flex flex-col gap-y-2 w-fit'>
-                  <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                  <SectionTitle
-                    className={`!text-left !font-semibold !text-lg`}
-                    text={"Lorem ipsum dolor sit amet"}
-                  />
-                </div>
-              </div>
-              <div className='flex flex-col w-full gap-y-2'>
-                <img
-                  src='/card-placeholder.jpg'
-                  className='w-full'
-                />
-                <div className='flex flex-col gap-y-2 w-fit'>
-                  <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                  <SectionTitle
-                    className={`!text-left !font-semibold !text-lg`}
-                    text={"Lorem ipsum dolor sit amet"}
-                  />
-                </div>
-              </div>
-              <div className='flex flex-col w-full gap-y-2'>
-                <img
-                  src='/card-placeholder.jpg'
-                  className='w-full'
-                />
-                <div className='flex flex-col gap-y-2 w-fit'>
-                  <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                  <SectionTitle
-                    className={`!text-left !font-semibold !text-lg`}
-                    text={"Lorem ipsum dolor sit amet"}
-                  />
-                </div>
-              </div>
+            <div className='grid w-full lg:w-[960px] grid-cols-1 lg:grid-cols-3 gap-4'>
+              {
+                searchResultData.map((result, index) => (
+                  <div className='flex flex-col w-full gap-y-2'>
+                    <img
+                      src={result.imageUrl}
+                      className='w-full'
+                    />
+                    <div className='flex flex-col gap-y-2 w-fit'>
+                      <h5 className='text-sm text-gray-400'>{formatDate(result.createdAt)}</h5>
+                      <SectionTitle
+                        className={`!text-left !font-semibold !text-lg`}
+                        text={result.title}
+                      />
+                    </div>
+                  </div>
+                ))
+              }
             </div>
             <Pagination
-              current={paginationFilter.currentPage}
-              total={paginationFilter.totalItems}
-              onChange={onPageChange}
+              current={searchResultPagination.currentPage}
+              total={searchResultPagination.totalItems}
+              onChange={onSearchResultPageChange}
             />
           </div>
         )}
-        <div className='flex w-full flex-col gap-y-8 justify-center items-center mt-10 lg:mt-[60px]'>
-          <div className='flex w-full lg:w-[960px]'>
-            <SectionTitle
-              text={"Popular News"}
-              classNames={"!text-left"}
-            />
-          </div>
-          <div className='grid w-full lg:w-[960px] grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 gap-4'>
-            <div className='lg:row-span-3 flex flex-col w-full gap-y-2'>
-              <img
-                src='/card-placeholder.jpg'
-                className='w-full'
-              />
-              <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-              <SectionTitle
-                className={`!text-left !font-semibold !text-xl`}
-                text={"Lorem ipsum dolor sit amet"}
-              />
-              <h4 className='text-gray-400 text-base font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </h4>
-            </div>
-            <div className='lg:col-start-2 flex w-full gap-x-2'>
-              <img
-                src='/card-placeholder.jpg'
-                className='w-1/2'
-              />
-              <div className='flex flex-col gap-y-2 w-fit'>
-                <h5 className='text-sm text-gray-400'>23 October 2024</h5>
+        {
+          spotlightData.length > 0 && (
+            <div className='flex w-full flex-col gap-y-8 justify-center items-center mt-10 lg:mt-[60px]'>
+              <div className='flex w-full lg:w-[960px]'>
                 <SectionTitle
-                  className={`!text-left !font-semibold !text-lg`}
-                  text={"Lorem ipsum dolor sit amet"}
+                  text={"Popular News"}
+                  classNames={"!text-left"}
                 />
               </div>
-            </div>
-            <div className='flex w-full gap-x-2'>
-              <img
-                src='/card-placeholder.jpg'
-                className='w-1/2'
-              />
-              <div className='flex flex-col gap-y-2 w-fit'>
-                <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                <SectionTitle
-                  className={`!text-left !font-semibold !text-lg`}
-                  text={"Lorem ipsum dolor sit amet"}
-                />
+              <div className='grid w-full lg:w-[960px] grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 gap-4'>
+                <div className='lg:row-span-3 flex flex-col w-full gap-y-2'>
+                  <img
+                    src={spotlightData[0].imageUrl}
+                    className='w-full'
+                  />
+                  <h5 className='text-sm text-gray-400'>{formatDate(spotlightData[0].createdAt)}</h5>
+                  <SectionTitle
+                    className={`!text-left !font-semibold !text-xl`}
+                    text={spotlightData[0].title}
+                  />
+                  <h4 className='text-gray-400 text-base font-normal'>{spotlightData[0].shortDesc}</h4>
+                </div>
+                <div className='lg:col-start-2 flex w-full gap-x-2'>
+                  <img
+                    src={listData[0].imageUrl}
+                    className='w-1/2'
+                  />
+                  <div className='flex flex-col gap-y-2 w-fit'>
+                    <h5 className='text-sm text-gray-400'>{formatDate(listData[0].createdAt)}</h5>
+                    <SectionTitle
+                      className={`!text-left !font-semibold !text-lg`}
+                      text={listData[0].title}
+                    />
+                  </div>
+                </div>
+                {
+                  listData.length > 1 && (
+                    <div className='flex w-full gap-x-2'>
+                      <img
+                        src={listData[1].imageUrl}
+                        className='w-1/2'
+                      />
+                      <div className='flex flex-col gap-y-2 w-fit'>
+                        <h5 className='text-sm text-gray-400'>{formatDate(listData[1].createdAt)}</h5>
+                        <SectionTitle
+                          className={`!text-left !font-semibold !text-lg`}
+                          text={listData[1].title}
+                        />
+                      </div>
+                    </div>
+                  )
+                }
+                {
+                  listData.length > 2 && (
+                    <div className='flex w-full gap-x-2'>
+                      <img
+                        src={listData[2].imageUrl}
+                        className='w-1/2'
+                      />
+                      <div className='flex flex-col gap-y-2 w-fit'>
+                        <h5 className='text-sm text-gray-400'>{formatDate(listData[2].createdAt)}</h5>
+                        <SectionTitle
+                          className={`!text-left !font-semibold !text-lg`}
+                          text={listData[2].title}
+                        />
+                      </div>
+                    </div>
+                  )
+                }
               </div>
             </div>
-            <div className='flex w-full gap-x-2'>
-              <img
-                src='/card-placeholder.jpg'
-                className='w-1/2'
-              />
-              <div className='flex flex-col gap-y-2 w-fit'>
-                <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                <SectionTitle
-                  className={`!text-left !font-semibold !text-lg`}
-                  text={"Lorem ipsum dolor sit amet"}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+          )
+        }
         <div className='flex w-full flex-col gap-y-8 justify-center items-center mt-10 lg:mt-[60px]'>
           <div className='flex w-full lg:w-[960px]'>
             <SectionTitle
@@ -211,85 +169,24 @@ function List() {
               classNames={"!text-left"}
             />
           </div>
-          <div className='grid w-full lg:w-[960px] grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-4'>
-            <div className='flex flex-col w-full gap-y-2'>
-              <img
-                src='/card-placeholder.jpg'
-                className='w-full'
-              />
-              <div className='flex flex-col gap-y-2 w-fit'>
-                <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                <SectionTitle
-                  className={`!text-left !font-semibold !text-lg`}
-                  text={"Lorem ipsum dolor sit amet"}
-                />
-              </div>
-            </div>
-            <div className='flex flex-col w-full gap-y-2'>
-              <img
-                src='/card-placeholder.jpg'
-                className='w-full'
-              />
-              <div className='flex flex-col gap-y-2 w-fit'>
-                <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                <SectionTitle
-                  className={`!text-left !font-semibold !text-lg`}
-                  text={"Lorem ipsum dolor sit amet"}
-                />
-              </div>
-            </div>
-            <div className='flex flex-col w-full gap-y-2'>
-              <img
-                src='/card-placeholder.jpg'
-                className='w-full'
-              />
-              <div className='flex flex-col gap-y-2 w-fit'>
-                <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                <SectionTitle
-                  className={`!text-left !font-semibold !text-lg`}
-                  text={"Lorem ipsum dolor sit amet"}
-                />
-              </div>
-            </div>
-            <div className='flex flex-col w-full gap-y-2'>
-              <img
-                src='/card-placeholder.jpg'
-                className='w-full'
-              />
-              <div className='flex flex-col gap-y-2 w-fit'>
-                <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                <SectionTitle
-                  className={`!text-left !font-semibold !text-lg`}
-                  text={"Lorem ipsum dolor sit amet"}
-                />
-              </div>
-            </div>
-            <div className='flex flex-col w-full gap-y-2'>
-              <img
-                src='/card-placeholder.jpg'
-                className='w-full'
-              />
-              <div className='flex flex-col gap-y-2 w-fit'>
-                <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                <SectionTitle
-                  className={`!text-left !font-semibold !text-lg`}
-                  text={"Lorem ipsum dolor sit amet"}
-                />
-              </div>
-            </div>
-            <div className='flex flex-col w-full gap-y-2'>
-              <img
-                src='/card-placeholder.jpg'
-                className='w-full'
-              />
-              <div className='flex flex-col gap-y-2 w-fit'>
-                <h5 className='text-sm text-gray-400'>23 October 2024</h5>
-                <SectionTitle
-                  className={`!text-left !font-semibold !text-lg`}
-                  text={"Lorem ipsum dolor sit amet"}
-                />
-              </div>
-            </div>
+          <div className='grid w-full lg:w-[960px] grid-cols-1 lg:grid-cols-3 gap-4'>
+            {
+              listData.map((article, index) => (
+                <div className='flex flex-col w-full gap-y-2'>
+                  <img
+                    src={article.imageUrl}
+                    className='w-full'
+                  />
+                  <div className='flex flex-col gap-y-2 w-fit'>
+                    <h5 className='text-sm text-gray-400'>{formatDate(article.createdAt)}</h5>
+                    <SectionTitle
+                      className={`!text-left !font-semibold !text-lg`}
+                      text={article.title}
+                    />
+                  </div>
+                </div>
+              ))
+            }
           </div>
           <Pagination
             current={paginationFilter.currentPage}
