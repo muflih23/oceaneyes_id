@@ -20,8 +20,8 @@ function TestimoniCTA() {
             <h4 className='text-base'>Bergabung Sekarang</h4>
           </button>
         </div>
-        <div className='w-full lg:w-[300px]'>
-          <img src='/testimonial-cta.png' alt='testimonial call to action' className='' />
+        <div className='w-full lg:w-[400px]'>
+          <img src='/next.png' alt='testimonial call to action' className='' />
         </div>
       </div>
 

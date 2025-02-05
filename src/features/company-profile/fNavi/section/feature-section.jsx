@@ -3,10 +3,49 @@ import SectionLayout from "../../../../components/layout/section-layout";
 import SectionTitle from "../../../../components/atoms/section-title";
 import { FaCheckCircle } from "react-icons/fa";
 import HeroTitle from "../../../../components/atoms/hero-title";
+import CustomCarousel from "../../../../components/molecules/custom-carousel/carousel";
 
 export default function FeatureSection() {
 
   const [activeTab, setActiveTab] = useState(0);
+
+  const cloudRemovalCarousel = [
+    {
+      element: (
+        <div className="w-full">
+          <img src="https://storage.oceaneyes.id/oceaneyes/web/pre-removal.webp" className="w-full lg:h-[206.5px]" />
+        </div>
+      ),
+      title: "Before"
+    },
+    {
+      element: (
+        <div className="w-full">
+          <img src="https://storage.oceaneyes.id/oceaneyes/web/post-removal.webp" className="w-full lg:h-[206.5px]" />
+        </div>
+      ),
+      title: "After"
+    },
+  ]
+
+  const otherCarousel = [
+    {
+      element: (
+        <div className="w-full">
+          <img src="https://storage.oceaneyes.id/oceaneyes/web/anomali.webp" className="w-full lg:h-[206.5px]" />
+        </div>
+      ),
+      title: "Anomali"
+    },
+    {
+      element: (
+        <div className="w-full">
+          <img src="https://storage.oceaneyes.id/oceaneyes/web/klorofil.webp" className="w-full lg:h-[206.5px]" />
+        </div>
+      ),
+      title: "Klorofil"
+    },
+  ]
 
   return (
     <div className="flex flex-col w-full">
@@ -36,7 +75,14 @@ export default function FeatureSection() {
               />
               <h6 className='font-normal text-base text-white'>Teknologi pencitraan satelit terbatas karena lebih dari 60% permukaan laut terhalang awan. Oceaneyes hadir dengan teknologi AI canggih yang merekonstruksi dan melengkapi data suhu permukaan laut di area tertutup awan, menghasilkan informasi kondisi laut yang lebih presisi dan akurat.</h6>
             </div>
-            <img src="https://storage.oceaneyes.id/oceaneyes/web/pre-removal.webp" className="w-full lg:w-[400px] rounded-lg" />
+            {/* <img src="https://storage.oceaneyes.id/oceaneyes/web/pre-removal.webp" className="w-full lg:w-[400px] rounded-lg" /> */}
+            <div className="w-full lg:w-[400px]">
+              <CustomCarousel
+                autoSlide={false}
+                items={cloudRemovalCarousel}
+                colorScheme="secondary"
+              />
+            </div>
           </div>
         </div>
       </SectionLayout>
@@ -78,7 +124,13 @@ export default function FeatureSection() {
               />
               <h6 className='text-white font-normal text-base text-foreground'>Data data lain yang anda butuhkan terkait kondisi laut akan tersedia di fnavi dan secara terus menerus akan terus ditambah menyesuaikan kebutuhan para nelayan ataupun pelaku usaha lain di sektor maritime..</h6>
             </div>
-            <img src="https://storage.oceaneyes.id/oceaneyes/web/klorofil.webp" className="w-full lg:w-[400px] rounded-lg" />
+            <div className="w-full lg:w-[400px]">
+              <CustomCarousel
+                autoSlide={false}
+                items={otherCarousel}
+                colorScheme="secondary"
+              />
+            </div>
           </div>
         </div>
       </SectionLayout>
