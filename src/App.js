@@ -1,16 +1,33 @@
 import './App.css';
 import {
-  BrowserRouter as Router, Routes, Route
+  BrowserRouter as Router, Routes, Route,
+  useLocation
 } from "react-router-dom";
 import { routes } from './routes';
 import { Helmet } from 'react-helmet';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import PageLayout from './components/layout/page-layout';
 import { Spin } from 'antd';
+import ReactGA from 'react-ga4'
+
+function GoogleAnalytics() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname })
+  }, [location])
+}
+
 
 function App() {
+
+  useEffect(() => {
+    ReactGA.initialize(process.env.REACT_APP_TRACKING_ID);
+  }, [])
+
   return (
     <Router>
+      <GoogleAnalytics />
       <Routes>
         {
           routes.map((page, index) => (
@@ -21,13 +38,13 @@ function App() {
                   <Helmet>
                     <title>Oceaneyes Indonesia</title>
                     <meta name='title' content='Oceaneyes' />
-                    <meta name='description' content='We are dedicated to foster sustainable coconut production in Indonesia by prioritizing conscientious practices that optimize productivity while minimizing the ecological footprint. Our commitment is to deliver exceptional, eco-friendly coconut products to our discerning consumers, meticulously crafted with minimal reliance on synthetic chemicals. We develop the livelihoods and open up business prospects for Indonesian farmers by offering them fair pricing, access to larger markets, and advice on sustainable farming methods.' />
+                    <meta name='description' content='OceanEyes menghadirkan analitik berbasis AI, big data, dan satelit untuk mendukung pengelolaan sumber daya laut yang efisien dan berkelanjutan' />
                     <meta name="og:title" content="Oceaneyes" />
-                    <meta name="og:description" content="We are dedicated to foster sustainable coconut production in Indonesia by prioritizing conscientious practices that optimize productivity while minimizing the ecological footprint. Our commitment is to deliver exceptional, eco-friendly coconut products to our discerning consumers, meticulously crafted with minimal reliance on synthetic chemicals. We develop the livelihoods and open up business prospects for Indonesian farmers by offering them fair pricing, access to larger markets, and advice on sustainable farming methods." />
+                    <meta name="og:description" content="OceanEyes menghadirkan analitik berbasis AI, big data, dan satelit untuk mendukung pengelolaan sumber daya laut yang efisien dan berkelanjutan" />
                     <meta name="og:image" content="/favicon.ico" />
                     <meta name="og:card" content="/favicon.ico" />
                     <meta name="twitter:title" content="Oceaneyes" />
-                    <meta name="twitter:description" content="We are dedicated to foster sustainable coconut production in Indonesia by prioritizing conscientious practices that optimize productivity while minimizing the ecological footprint. Our commitment is to deliver exceptional, eco-friendly coconut products to our discerning consumers, meticulously crafted with minimal reliance on synthetic chemicals. We develop the livelihoods and open up business prospects for Indonesian farmers by offering them fair pricing, access to larger markets, and advice on sustainable farming methods." />
+                    <meta name="twitter:description" content="OceanEyes menghadirkan analitik berbasis AI, big data, dan satelit untuk mendukung pengelolaan sumber daya laut yang efisien dan berkelanjutan" />
                     <meta name="twitter:image" content="/favicon.ico" />
                     <meta name="twitter:card" content="/favicon.ico" />
                   </Helmet>
