@@ -3,6 +3,7 @@ import ContactForm from "./section/contact-form";
 import ContactInfoSection from "./section/contact-info-section";
 import ContactHeroSection from "./section/hero-section";
 import ContactBodySection from "./section/body-section";
+import { Helmet } from "react-helmet-async";
 
 export default function ContactUs() {
 
@@ -11,8 +12,13 @@ export default function ContactUs() {
   })
 
   return (
-    <div className="flex flex-col w-full">
-      <ContactHeroSection />
-    </div>
+    <>
+      <Helmet>
+        <title>Hubungi Kami | Oceaneyes Indonesia</title>
+      </Helmet>
+      <div className="flex flex-col w-full">
+        <ContactHeroSection />
+      </div>
+    </>
   )
 }

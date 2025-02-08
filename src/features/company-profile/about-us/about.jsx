@@ -6,6 +6,7 @@
 // import VisionSection from "./section/vision-section";
 
 import { lazy, useEffect } from "react"
+import { Helmet } from "react-helmet-async";
 
 const CompanySection = lazy(() => import("./section/company-section"));
 const AboutHeroSection = lazy(() => import("./section/hero-section"))
@@ -17,21 +18,26 @@ const MemberSection = lazy(() => import("./section/member-section"))
 
 export default function AboutPage() {
 
-    useEffect(() => {
-        window.scrollTo(0,0)
-    })    
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
-    return (
-        <div className="flex flex-col w-full">
-            <AboutHeroSection />
-            <CompanySection />
-            <div className="flex w-full flex-col lg:flex-row">
-                <VisionSection />
-                <MisionSection />
-            </div>
-            <TimelineSection />
-            <ValueSection />
-            <MemberSection />
+  return (
+    <>
+      <Helmet>
+        <title>Tentang Kami | Oceaneyes Indonesia</title>
+      </Helmet>
+      <div className="flex flex-col w-full">
+        <AboutHeroSection />
+        <CompanySection />
+        <div className="flex w-full flex-col lg:flex-row">
+          <VisionSection />
+          <MisionSection />
         </div>
-    )
+        <TimelineSection />
+        <ValueSection />
+        <MemberSection />
+      </div>
+    </>
+  )
 }

@@ -1,5 +1,5 @@
 import { lazy, useEffect, useRef, useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import PSProductSection from '../product-and-services/section/product-section';
 // import HeroSection from './section/hero-section';
 // import GoalSection from './section/goal-section';
@@ -17,11 +17,16 @@ export default function Homepage() {
     })
 
     return (
-        <div className='flex flex-col w-screen overflow-x-hidden'>
-            <HeroSection />
-            <GoalSection />
-            <PSProductSection />
-            <UpdateSection />
-        </div>
+        <>
+            <Helmet>
+                <title>Home | Oceaneyes Indonesia</title>
+            </Helmet>
+            <div className='flex flex-col w-screen overflow-x-hidden'>
+                <HeroSection />
+                <GoalSection />
+                <PSProductSection />
+                <UpdateSection />
+            </div>
+        </>
     );
 }

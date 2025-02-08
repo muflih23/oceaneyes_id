@@ -4,6 +4,7 @@ import FishingGroundMapFeatures from './section/features'
 import FishingGroundMapDisplay from './section/display'
 import FishingGroundMapStep from './section/step'
 import CTASection from '../product-and-services/section/cta-section'
+import { Helmet } from 'react-helmet-async'
 
 function FishingGroundMap() {
 
@@ -23,18 +24,23 @@ function FishingGroundMap() {
   }
 
   return (
-    <div className='flex flex-col w-full'>
-      <FishingGroundMapHeader
-        scrollToFeature={() => scrollToFeature()}
-        scrollToCTA={() => scrollToCTA()}
-      />
-      <FishingGroundMapFeatures ref={featureRef} />
-      <FishingGroundMapDisplay />
-      <FishingGroundMapStep />
-      <div ref={ctaRef} className='flex w-full'>
-        <CTASection />
+    <>
+      <Helmet>
+        <title>Fishing Ground Map | Oceaneyes Indonesia</title>
+      </Helmet>
+      <div className='flex flex-col w-full'>
+        <FishingGroundMapHeader
+          scrollToFeature={() => scrollToFeature()}
+          scrollToCTA={() => scrollToCTA()}
+        />
+        <FishingGroundMapFeatures ref={featureRef} />
+        <FishingGroundMapDisplay />
+        <FishingGroundMapStep />
+        <div ref={ctaRef} className='flex w-full'>
+          <CTASection />
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
