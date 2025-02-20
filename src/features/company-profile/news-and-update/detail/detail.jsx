@@ -19,7 +19,7 @@ function Detail() {
     <>
       <Helmet>
         {
-          articleDTL.title.length > 0 ? (
+          articleDTL?.title ? (
             <title>{`${articleDTL.title} | Oceaneyes Indonesia`}</title>
           ) : (
             <title>Oceaneyes Indonesia</title>
