@@ -14,6 +14,10 @@ function Footer({
 
   const navigate = useNavigate()
 
+  const onLinkedinClick = () => {
+    window.open('https://www.linkedin.com/company/oceaneyes/')
+  }
+
   return (
     <div className='flex flex-col w-full bg-primary px-[22px] md:px-8 xl:px-[67px] py-12 gap-y-10'>
       <Separator />
@@ -51,7 +55,7 @@ function Footer({
         <h3 className='font-bold text-secondary text-[20px]'>Temukan Kami</h3>
         <div className='flex gap-x-4 justify-center items-center w-full'>
           <FaYoutube size={25} className='text-white hover:text-cyan-200 hover:cursor-pointer'/>
-          <FaLinkedin size={25} className='text-white hover:text-cyan-200 hover:cursor-pointer'/>
+          <FaLinkedin size={25} onClick={() => onLinkedinClick()} className='text-white hover:text-cyan-200 hover:cursor-pointer'/>
           <FaInstagram size={25} className='text-white hover:text-cyan-200 hover:cursor-pointer'/>
         </div>
       </div>
