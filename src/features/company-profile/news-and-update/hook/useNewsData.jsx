@@ -6,6 +6,7 @@ function useNewsData() {
   const [loading, setLoading] = useState(false);
 
   const [listData, setListData] = useState([]);
+  const [listSpotlight, setListSpotlight] = useState([]);
   const [spotlightData, setSpotlightData] = useState([]);
   const [searchResultData, setSearchResultData] = useState([]);
   const [keyword, setKeyword] = useState('');
@@ -47,6 +48,7 @@ function useNewsData() {
           totalItems: response.meta.totalData,
           totalPage: response.meta.totalPage,
         })
+        listSpotlight.length < 1 && setListSpotlight(response.data);
       } 
     } catch (error) {
       console.error("error getting list article:", error)
@@ -142,6 +144,7 @@ function useNewsData() {
     searchResultPagination,
     onSearchResultPageChange,
     searchResultData,
+    listSpotlight,
   }
 }
 

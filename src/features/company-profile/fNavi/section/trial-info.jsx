@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import SectionTitle from "../../../../components/atoms/section-title";
 import SectionLayout from "../../../../components/layout/section-layout";
 
 export default function TrialInfoSection() {
+
+  const navigate = useNavigate()
   return (
     <SectionLayout classNames={`lg:items-center`}>
       <div className="flex flex-col w-full lg:max-w-[1000px] bg-primaryLGray p-10 rounded-2xl">
@@ -17,7 +20,7 @@ export default function TrialInfoSection() {
             <img src="/fill_form.svg" className="w-[28px]" />
             <h6 className="text-textGray text-base text-left">Isi link berikut ini</h6>
             <button
-              onClick={() => {}}
+              onClick={() => navigate('/contact-us')}
               className="bg-secondary rounded-2xl py-2 flex justify-center items-center w-[141px] text-white font-bold text-sm"
             >
               Klik Disini

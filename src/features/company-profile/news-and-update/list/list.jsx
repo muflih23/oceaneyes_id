@@ -29,6 +29,7 @@ function List() {
     searchResultPagination,
     onSearchResultPageChange,
     searchResultData,
+    listSpotlight,
   } = useNewsData()
 
   return (
@@ -115,48 +116,52 @@ function List() {
                   />
                   <h4 className='text-gray-400 text-base font-normal'>{spotlightData[0].shortDesc}</h4>
                 </div>
-                <div onClick={() => handleNavigateToDetail(listData[0]._id)} className='lg:col-start-2 flex w-full gap-x-2 hover:cursor-pointer'>
-                  <img
-                    src={listData[0].imageUrl}
-                    className='w-1/2'
-                  />
-                  <div className='flex flex-col gap-y-2 w-fit'>
-                    <h5 className='text-sm text-gray-400'>{formatDate(listData[0].createdAt)}</h5>
-                    <SectionTitle
-                      className={`!text-left !font-semibold !text-lg`}
-                      text={listData[0].title}
-                    />
-                  </div>
-                </div>
                 {
-                  listData.length > 1 && (
-                    <div onClick={() => handleNavigateToDetail(listData[1]._id)} className='flex w-full gap-x-2 hover:cursor-pointer'>
+                  listSpotlight.length > 0 && (
+                    <div onClick={() => handleNavigateToDetail(listSpotlight[0]._id)} className='lg:col-start-2 flex w-full gap-x-2 hover:cursor-pointer'>
                       <img
-                        src={listData[1].imageUrl}
+                        src={listSpotlight[0].imageUrl}
                         className='w-1/2'
                       />
                       <div className='flex flex-col gap-y-2 w-fit'>
-                        <h5 className='text-sm text-gray-400'>{formatDate(listData[1].createdAt)}</h5>
+                        <h5 className='text-sm text-gray-400'>{formatDate(listSpotlight[0].createdAt)}</h5>
                         <SectionTitle
                           className={`!text-left !font-semibold !text-lg`}
-                          text={listData[1].title}
+                          text={listSpotlight[0].title}
                         />
                       </div>
                     </div>
                   )
                 }
                 {
-                  listData.length > 2 && (
-                    <div onClick={() => handleNavigateToDetail(listData[2]._id)} className='flex w-full gap-x-2 hover:cursor-pointer'>
+                  listSpotlight.length > 1 && (
+                    <div onClick={() => handleNavigateToDetail(listSpotlight[1]._id)} className='flex w-full gap-x-2 hover:cursor-pointer'>
                       <img
-                        src={listData[2].imageUrl}
+                        src={listSpotlight[1].imageUrl}
                         className='w-1/2'
                       />
                       <div className='flex flex-col gap-y-2 w-fit'>
-                        <h5 className='text-sm text-gray-400'>{formatDate(listData[2].createdAt)}</h5>
+                        <h5 className='text-sm text-gray-400'>{formatDate(listSpotlight[1].createdAt)}</h5>
                         <SectionTitle
                           className={`!text-left !font-semibold !text-lg`}
-                          text={listData[2].title}
+                          text={listSpotlight[1].title}
+                        />
+                      </div>
+                    </div>
+                  )
+                }
+                {
+                  listSpotlight.length > 2 && (
+                    <div onClick={() => handleNavigateToDetail(listSpotlight[2]._id)} className='flex w-full gap-x-2 hover:cursor-pointer'>
+                      <img
+                        src={listSpotlight[2].imageUrl}
+                        className='w-1/2'
+                      />
+                      <div className='flex flex-col gap-y-2 w-fit'>
+                        <h5 className='text-sm text-gray-400'>{formatDate(listSpotlight[2].createdAt)}</h5>
+                        <SectionTitle
+                          className={`!text-left !font-semibold !text-lg`}
+                          text={listSpotlight[2].title}
                         />
                       </div>
                     </div>
