@@ -38,7 +38,7 @@ function Detail() {
           </div>
           <div className='flex flex-col w-full justify-center items-center gap-y-6 pt-10'>
             <img src={articleDTL.imageUrl} className='w-full' />
-            <div className='flex flex-col w-full gap-y-2 pb-10'>
+            <div className='flex flex-col w-full gap-y-2 pb-10 px-4 lg:px-0'>
               <div dangerouslySetInnerHTML={{ __html: articleDTL.text }} />
             </div>
           </div>
