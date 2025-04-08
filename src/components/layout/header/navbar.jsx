@@ -61,7 +61,7 @@ function Navbar({
   ]
 
   return (
-    <div className={`${openMobileNav ? `hidden` : `flex`} w-full justify-between items-center px-8 xl:px-[67px] py-[22px] fixed left-0 top-0 ${invisible ? `navbar-faded` : `navbar-white drop-shadow-lg`} z-[8000] navbar-animated`}>
+    <header className={`${openMobileNav ? `hidden` : `flex`} w-full justify-between items-center px-8 xl:px-[67px] py-[22px] fixed left-0 top-0 ${invisible ? `navbar-faded` : `navbar-white drop-shadow-lg`} z-[8000] navbar-animated`}>
       <DropdownMenu
         open={openMobileNav}
         onClose={() => setOpenMobileNav(false)}
@@ -137,7 +137,7 @@ function Navbar({
           />
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 

@@ -19,7 +19,7 @@ function Footer({
   }
 
   return (
-    <div className='flex flex-col w-full bg-primary px-[22px] md:px-8 xl:px-[67px] py-12 gap-y-10'>
+    <footer className='flex flex-col w-full bg-primary px-[22px] md:px-8 xl:px-[67px] py-12 gap-y-10'>
       <Separator />
       <div className='w-full grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-8 xl:gap-10'>
         <div className='flex flex-col gap-y-4 w-full'>
@@ -59,7 +59,7 @@ function Footer({
           <FaInstagram size={25} className='text-white hover:text-cyan-200 hover:cursor-pointer'/>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
 
