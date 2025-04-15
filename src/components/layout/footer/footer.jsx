@@ -32,8 +32,7 @@ function Footer({
         <div className='flex flex-col'>
           <h3 className='font-bold text-secondary text-[20px]'>Alamat</h3>
           <ul className='flex flex-col gap-y-4'>
-            <li className='font-light text-white text-base'>Kyoto office : Kyoto City, Nakagyo Ward, Uraideyama-cho 308 Yamachu Building 26</li>
-            <li className='font-light text-white text-base'>Tokyo Office : 402 Taiyo Building, 3-27-1 Kanda Sakumacho, Chiyoda-ku, Tokyo 101-0025</li>
+            <li className='font-light text-white text-base'>Bella Terra Lifestyle Center Kelapa Gading, Jl. Boulevard Raya UG Floor, 1, 2 & 3, East Kelapa Gading, Kelapa Gading, Jakarta, 14240</li>
           </ul>
         </div>
         <div className='flex flex-col gap-y-4 w-full'>

@@ -40,15 +40,9 @@ function ContactHeroSection() {
           <div className='flex flex-col gap-y-2'>
             <div className='flex gap-x-4'>
               <div className="flex flex-col w-full gap-y-4 bg-black bg-opacity-10 backdrop-blur-md p-4 rounded-lg max-w-[200px]">
-                <h3 className="font-semibold text-white text-[20px]">Kyoto Office</h3>
+                <h3 className="font-semibold text-white text-[20px]">Office</h3>
                 <ul className="space-y-4">
-                  <li className="font-normal text-white text-sm">Kyoto City, Nakagyo Ward, Uraideyama-cho 308 Yamachu Building 26</li>
-                </ul>
-              </div>
-              <div className="flex flex-col w-full gap-y-4 bg-black bg-opacity-10 backdrop-blur-md p-4 rounded-lg max-w-[200px]">
-                <h3 className="font-semibold text-white text-[20px]">Tokyo Office</h3>
-                <ul className="space-y-4">
-                  <li className="font-normal text-white text-sm">402 Taiyo Building, 3-27-1 Kanda Sakumacho, Chiyoda-ku, Tokyo 101-0025</li>
+                  <li className="font-normal text-white text-sm">Bella Terra Lifestyle Center Kelapa Gading, Jl. Boulevard Raya UG Floor, 1, 2 & 3, East Kelapa Gading, Kelapa Gading, Jakarta, 14240</li>
                 </ul>
               </div>
             </div>
