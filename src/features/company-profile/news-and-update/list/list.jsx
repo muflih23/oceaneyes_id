@@ -121,7 +121,7 @@ function List() {
                     <div onClick={() => handleNavigateToDetail(listSpotlight[0]._id)} className='lg:col-start-2 flex w-full gap-x-2 hover:cursor-pointer'>
                       <img
                         src={listSpotlight[0].imageUrl}
-                        className='w-1/2'
+                        className='w-1/2 h-auto object-contain'
                       />
                       <div className='flex flex-col gap-y-2 w-fit'>
                         <h5 className='text-sm text-gray-400'>{formatDate(listSpotlight[0].createdAt)}</h5>
@@ -138,7 +138,7 @@ function List() {
                     <div onClick={() => handleNavigateToDetail(listSpotlight[1]._id)} className='flex w-full gap-x-2 hover:cursor-pointer'>
                       <img
                         src={listSpotlight[1].imageUrl}
-                        className='w-1/2'
+                        className='w-1/2 h-auto object-contain'
                       />
                       <div className='flex flex-col gap-y-2 w-fit'>
                         <h5 className='text-sm text-gray-400'>{formatDate(listSpotlight[1].createdAt)}</h5>
@@ -155,7 +155,7 @@ function List() {
                     <div onClick={() => handleNavigateToDetail(listSpotlight[2]._id)} className='flex w-full gap-x-2 hover:cursor-pointer'>
                       <img
                         src={listSpotlight[2].imageUrl}
-                        className='w-1/2'
+                        className='w-1/2 h-auto object-contain'
                       />
                       <div className='flex flex-col gap-y-2 w-fit'>
                         <h5 className='text-sm text-gray-400'>{formatDate(listSpotlight[2].createdAt)}</h5>
