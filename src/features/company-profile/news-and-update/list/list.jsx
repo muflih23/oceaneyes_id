@@ -103,7 +103,7 @@ function List() {
                   classNames={"!text-left"}
                 />
               </div>
-              <div className='grid w-full lg:w-[960px] grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 gap-4'>
+              <div className='grid w-full lg:w-[960px] grid-cols-1 lg:grid-cols-2 gap-4'>
                 <div onClick={() => handleNavigateToDetail(spotlightData[0]._id)} className='lg:row-span-3 flex flex-col w-full gap-y-2 hover:cursor-pointer'>
                   <img
                     src={spotlightData[0].imageUrl}
@@ -116,57 +116,59 @@ function List() {
                   />
                   <h4 className='text-gray-400 text-base font-normal'>{spotlightData[0].shortDesc}</h4>
                 </div>
-                {
-                  listSpotlight.length > 0 && (
-                    <div onClick={() => handleNavigateToDetail(listSpotlight[0]._id)} className='lg:col-start-2 flex w-full gap-x-2 hover:cursor-pointer'>
-                      <img
-                        src={listSpotlight[0].imageUrl}
-                        className='w-1/2 h-auto object-contain'
-                      />
-                      <div className='flex flex-col gap-y-2 w-fit'>
-                        <h5 className='text-sm text-gray-400'>{formatDate(listSpotlight[0].createdAt)}</h5>
-                        <SectionTitle
-                          className={`!text-left !font-semibold !text-lg`}
-                          text={listSpotlight[0].title}
+                <div className='lg:col-start-2 flex w-full flex-col gap-6'>
+                  {
+                    listSpotlight.length > 0 && (
+                      <div onClick={() => handleNavigateToDetail(listSpotlight[0]._id)} className='lg:col-start-2 flex w-full items-start gap-x-2 hover:cursor-pointer !h-fit hover:shadow-md'>
+                        <img
+                          src={listSpotlight[0].imageUrl}
+                          className='w-1/2 h-auto object-contain'
                         />
+                        <div className='flex flex-col gap-y-2 w-fit'>
+                          <h5 className='text-sm text-gray-400'>{formatDate(listSpotlight[0].createdAt)}</h5>
+                          <SectionTitle
+                            className={`!text-left !font-semibold !text-sm lg:!text-lg`}
+                            text={listSpotlight[0].title}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  )
-                }
-                {
-                  listSpotlight.length > 1 && (
-                    <div onClick={() => handleNavigateToDetail(listSpotlight[1]._id)} className='flex w-full gap-x-2 hover:cursor-pointer'>
-                      <img
-                        src={listSpotlight[1].imageUrl}
-                        className='w-1/2 h-auto object-contain'
-                      />
-                      <div className='flex flex-col gap-y-2 w-fit'>
-                        <h5 className='text-sm text-gray-400'>{formatDate(listSpotlight[1].createdAt)}</h5>
-                        <SectionTitle
-                          className={`!text-left !font-semibold !text-lg`}
-                          text={listSpotlight[1].title}
+                    )
+                  }
+                  {
+                    listSpotlight.length > 1 && (
+                      <div onClick={() => handleNavigateToDetail(listSpotlight[1]._id)} className='flex w-full items-start gap-x-2 hover:cursor-pointer !h-fit hover:shadow-md'>
+                        <img
+                          src={listSpotlight[1].imageUrl}
+                          className='w-1/2 h-auto object-contain'
                         />
+                        <div className='flex flex-col gap-y-2 w-fit'>
+                          <h5 className='text-sm text-gray-400'>{formatDate(listSpotlight[1].createdAt)}</h5>
+                          <SectionTitle
+                            className={`!text-left !font-semibold !text-sm lg:!text-lg`}
+                            text={listSpotlight[1].title}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  )
-                }
-                {
-                  listSpotlight.length > 2 && (
-                    <div onClick={() => handleNavigateToDetail(listSpotlight[2]._id)} className='flex w-full gap-x-2 hover:cursor-pointer'>
-                      <img
-                        src={listSpotlight[2].imageUrl}
-                        className='w-1/2 h-auto object-contain'
-                      />
-                      <div className='flex flex-col gap-y-2 w-fit'>
-                        <h5 className='text-sm text-gray-400'>{formatDate(listSpotlight[2].createdAt)}</h5>
-                        <SectionTitle
-                          className={`!text-left !font-semibold !text-lg`}
-                          text={listSpotlight[2].title}
+                    )
+                  }
+                  {
+                    listSpotlight.length > 2 && (
+                      <div onClick={() => handleNavigateToDetail(listSpotlight[2]._id)} className='flex w-full items-start gap-x-2 hover:cursor-pointer !h-fit hover:shadow-md'>
+                        <img
+                          src={listSpotlight[2].imageUrl}
+                          className='w-1/2 h-auto object-contain'
                         />
+                        <div className='flex flex-col gap-y-2 w-fit'>
+                          <h5 className='text-sm text-gray-400'>{formatDate(listSpotlight[2].createdAt)}</h5>
+                          <SectionTitle
+                            className={`!text-left !font-semibold !text-sm lg:!text-lg`}
+                            text={listSpotlight[2].title}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  )
-                }
+                    )
+                  }
+                </div>
               </div>
             </div>
           )
