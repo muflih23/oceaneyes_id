@@ -1,6 +1,7 @@
 import { lazy, useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PSProductSection from '../product-and-services/section/product-section';
+import CTASection from '../product-and-services/section/cta-section';
 // import HeroSection from './section/hero-section';
 // import GoalSection from './section/goal-section';
 // import UpdateSection from './section/update-section';
@@ -26,6 +27,7 @@ export default function Homepage() {
                 <GoalSection />
                 <PSProductSection />
                 <UpdateSection />
+                <CTASection />
             </div>
         </>
     );
