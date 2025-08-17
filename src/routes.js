@@ -49,4 +49,10 @@ export const routes = [
     name: "fishermen-testimoni",
     requireAuth: false,
   },
+  {
+    path: "/oeview",
+    component: lazy(() => import('./features/company-profile/oeview/oeview.jsx')),
+    name: "oe-view",
+    requireAuth: false,
+  },
 ]

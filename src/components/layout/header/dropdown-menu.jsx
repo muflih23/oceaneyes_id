@@ -97,6 +97,19 @@ function DropdownMenu({
       )
     },
     {
+      key: '6A',
+      label: (
+        <span
+          onClick={() => {
+            navigate('/oeview')
+            onClose();
+          }}
+          className='font-semibold text-primary text-base'>
+          OE View
+        </span>
+      )
+    },
+    {
       key: '7',
       label: (
         <span

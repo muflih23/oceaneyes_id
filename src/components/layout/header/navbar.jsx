@@ -58,6 +58,18 @@ function Navbar({
       ),
       key: 2,
     },
+    {
+      label: (
+        <span
+          onClick={() => {
+            navigate('/oeview')
+          }}
+          className='font-normal text-black text-[12px]'>
+          OE View
+        </span>
+      ),
+      key: 3,
+    },
   ]
 
   return (
