@@ -7,7 +7,7 @@ export default function TimelineSection() {
   const events = [
     {
       year: "2019",
-      image: "https://storage.oceaneyes.id/oceaneyes/web/2019.jpeg", // Ganti dengan URL gambar Anda
+      image: "https://storage.oceaneyes.co.id/oceaneyes/web/2019.jpeg", // Ganti dengan URL gambar Anda
       title: "Riset Pasar",
       description: [
         "Langkah pertama kami dimulai dengan memahami lanskap bisnis dan metode mendalam terkait kebiasaan menangkap ikan serta industri perikanan di Indonesia.",
@@ -24,7 +24,7 @@ export default function TimelineSection() {
     },
     {
       year: "2024",
-      image: "https://storage.oceaneyes.id/oceaneyes/web/2024.webp", // Ganti dengan URL gambar Anda
+      image: "https://storage.oceaneyes.co.id/oceaneyes/web/2024.webp", // Ganti dengan URL gambar Anda
       title: "Percobaan Teknologi bersama Nelayan Lokal",
       description: [
         "Ocean Eyes melibatkan berbagai kelompok nelayan dalam uji coba teknologi:",
@@ -35,7 +35,7 @@ export default function TimelineSection() {
     },
     {
       year: "2025",
-      image: "https://storage.oceaneyes.id/oceaneyes/establish/establish.jpeg", // Ganti dengan URL gambar Anda
+      image: "https://storage.oceaneyes.co.id/oceaneyes/establish/establish.jpeg", // Ganti dengan URL gambar Anda
       title: "We officially establised our KP3A (Kantor Perwakilan Perdagangan Asing) in indonesia",
       description: [
         `OceanEyes mengumumkan pendirian Kantor Perwakilan Perdagangan Perusahaan Asing (KP3A) pertamanya di Indonesia, yang berlokasi di "Bella Terra Lifestyle Center Kelapa Gading lantai 2, Jl. Boulevard Raya Kelapa Gading", Jakarta Utara. Langkah ini merupakan bagian dari komitmen kami untuk semakin dekat dengan para pemangku kepentingan di sektor perikanan, khususnya para nelayan dan pelaku industri perikanan tangkap.`

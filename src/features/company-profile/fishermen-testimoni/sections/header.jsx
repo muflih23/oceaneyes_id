@@ -23,7 +23,7 @@ function TestimoniHeader() {
   ))
 
   return (
-    <div className='flex flex-col w-screen lg:min-h-[90vh] bg-[url("https://storage.oceaneyes.id/oceaneyes/web/2024.jpeg")] bg-center bg-cover justify-center items-center'>
+    <div className='flex flex-col w-screen lg:min-h-[90vh] bg-[url("https://storage.oceaneyes.co.id/oceaneyes/web/2024.jpeg")] bg-center bg-cover justify-center items-center'>
       <SectionLayout classNames={`!justify-center !items-center gap-y-8 lg:!gap-y-10 !pt-[86px] bg-black bg-opacity-30 min-h-[90vh]`}>
         <div className='flex flex-col w-full justify-center items-center gap-y-4 lg:max-w-[1320px]'>
           <HeroTitle

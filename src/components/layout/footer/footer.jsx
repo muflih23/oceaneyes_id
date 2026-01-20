@@ -45,7 +45,7 @@ function Footer({
         </div>
         <div className='flex w-full items-start'>
           <video className='w-2/3 md:w-1/2 lg:w-[200px]' autoPlay muted loop>
-            <source src='https://storage.oceaneyes.id/oceaneyes/footage/Adventure%20Instagram%20Post.mp4' type='video/mp4' />
+            <source src='https://storage.oceaneyes.co.id/oceaneyes/footage/Adventure%20Instagram%20Post.mp4' type='video/mp4' />
             Your browser does not support the video tag.
           </video>
         </div>

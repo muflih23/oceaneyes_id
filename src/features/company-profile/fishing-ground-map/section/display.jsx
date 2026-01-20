@@ -14,12 +14,12 @@ function FishingGroundMapDisplay() {
           />
           <div className='flex w-full lg:hidden justify-center'>
             <div className='flex w-full md:w-[200px] lg:hidden rounded-lg'>
-              <img src='https://storage.oceaneyes.id/oceaneyes/web/fishing-ground.webp' className='rounded-lg lg:hidden' />
+              <img src='https://storage.oceaneyes.co.id/oceaneyes/web/fishing-ground.webp' className='rounded-lg lg:hidden' />
             </div>
           </div>
           <div className='hidden lg:flex w-[400px] xl:w-[600px] bg-sky-100 rounded-lg p-8 justify-center items-center'>
             <div className='flex w-full rounded-lg w-[350px]'>
-              <img src='https://storage.oceaneyes.id/oceaneyes/web/fishing-ground.webp' className='rounded-lg' />
+              <img src='https://storage.oceaneyes.co.id/oceaneyes/web/fishing-ground.webp' className='rounded-lg' />
             </div>
           </div>
         </div>

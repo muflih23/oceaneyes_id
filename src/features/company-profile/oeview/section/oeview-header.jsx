@@ -32,7 +32,7 @@ function OEViewHeader() {
         </div>
         <div className="flex w-1/2 justify-center">
           <img
-            src="https://storage.oceaneyes.id/oceaneyes/web/get-app.png"
+            src="https://storage.oceaneyes.co.id/oceaneyes/web/get-app.png"
             className="w-[300px]"
           />
         </div>
@@ -45,7 +45,7 @@ function OEViewHeader() {
         </h1>
         <div className="flex w-full justify-center mt-4">
           <img
-            src="https://storage.oceaneyes.id/oceaneyes/web/get-app.png"
+            src="https://storage.oceaneyes.co.id/oceaneyes/web/get-app.png"
             className="w-full md:max-w-[300px]"
           />
         </div>

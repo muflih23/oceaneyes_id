@@ -13,7 +13,7 @@ export default function OEViewFeature() {
     {
       element: (
         <div className="w-full">
-          <img src="https://storage.oceaneyes.id/oceaneyes/web/pre-removal.webp" className="w-full lg:h-[206.5px]" />
+          <img src="https://storage.oceaneyes.co.id/oceaneyes/web/pre-removal.webp" className="w-full lg:h-[206.5px]" />
         </div>
       ),
       title: "Before"
@@ -21,7 +21,7 @@ export default function OEViewFeature() {
     {
       element: (
         <div className="w-full">
-          <img src="https://storage.oceaneyes.id/oceaneyes/web/post-removal.webp" className="w-full lg:h-[206.5px]" />
+          <img src="https://storage.oceaneyes.co.id/oceaneyes/web/post-removal.webp" className="w-full lg:h-[206.5px]" />
         </div>
       ),
       title: "After"
@@ -32,7 +32,7 @@ export default function OEViewFeature() {
     {
       element: (
         <div className="w-full">
-          <img src="https://storage.oceaneyes.id/oceaneyes/web/anomali.webp" className="w-full lg:h-[206.5px]" />
+          <img src="https://storage.oceaneyes.co.id/oceaneyes/web/anomali.webp" className="w-full lg:h-[206.5px]" />
         </div>
       ),
       title: "Anomali"
@@ -40,7 +40,7 @@ export default function OEViewFeature() {
     {
       element: (
         <div className="w-full">
-          <img src="https://storage.oceaneyes.id/oceaneyes/web/klorofil.webp" className="w-full lg:h-[206.5px]" />
+          <img src="https://storage.oceaneyes.co.id/oceaneyes/web/klorofil.webp" className="w-full lg:h-[206.5px]" />
         </div>
       ),
       title: "Klorofil"
@@ -75,7 +75,7 @@ export default function OEViewFeature() {
               />
               <h6 className='font-normal text-base text-white'>Teknologi pencitraan satelit terbatas karena lebih dari 60% permukaan laut terhalang awan. Oceaneyes hadir dengan teknologi AI canggih yang merekonstruksi dan melengkapi data suhu permukaan laut di area tertutup awan, menghasilkan informasi kondisi laut yang lebih presisi dan akurat.</h6>
             </div>
-            {/* <img src="https://storage.oceaneyes.id/oceaneyes/web/pre-removal.webp" className="w-full lg:w-[400px] rounded-lg" /> */}
+            {/* <img src="https://storage.oceaneyes.co.id/oceaneyes/web/pre-removal.webp" className="w-full lg:w-[400px] rounded-lg" /> */}
             <div className="w-full lg:w-[400px]">
               <CustomCarousel
                 autoSlide={false}
@@ -96,7 +96,7 @@ export default function OEViewFeature() {
               />
               <h6 className='font-normal text-base text-foreground'>Platform ini menampilkan data temperatur permukaan air laut yang mencakup hampir seluruh wilayah Asia Pasifik, termasuk perairan Indonesia, dengan pembaruan setiap 4 jam dan ramalan hingga 5 hari ke depan. Informasi temperatur dapat disesuaikan hingga kedalaman 200 meter di bawah permukaan, membantu nelayan memetakan area potensial untuk memancing berdasarkan karakter ikan yang ditarget.</h6>
             </div>
-            <img src="https://storage.oceaneyes.id/oceaneyes/web/post-removal.webp" className="w-full lg:w-[400px] rounded-lg" />
+            <img src="https://storage.oceaneyes.co.id/oceaneyes/web/post-removal.webp" className="w-full lg:w-[400px] rounded-lg" />
           </div>
         </div>
       </SectionLayout>
@@ -110,7 +110,7 @@ export default function OEViewFeature() {
               />
               <h6 className='font-normal text-base text-foreground'>Menyajikan data arah dan kecepatan arus laut yang mencakup seluruh Asia Pasifik, termasuk Indonesia, dengan pembaruan setiap 4 jam dan ramalan hingga 5 hari ke depan. Informasi ini membantu nelayan memetakan rute yang aman dan menghindari arus deras yang berpotensi mengganggu atau merusak proses memancing.</h6>
             </div>
-            <img src="https://storage.oceaneyes.id/oceaneyes/web/speed.webp" className="w-full lg:w-[400px] rounded-lg" />
+            <img src="https://storage.oceaneyes.co.id/oceaneyes/web/speed.webp" className="w-full lg:w-[400px] rounded-lg" />
           </div>
         </div>
       </SectionLayout>
